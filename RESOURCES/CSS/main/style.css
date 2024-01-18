@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+.sideBarBackground {
+    width: 230px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sideBarTopBackground {
+    width: 230px;
+    height: 200px;
+    background-color: #DAE2D4;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.sideBarTopContainer img {
+    width: 70%;
+    height: auto;
+    margin-top: -20px;
+}
+
+.sideBarTopContainer p {
+    font-size: 20px;
+    color: #456E2A;
+    margin-top: -15px;
+}
+
+.sideBarDropdown {
+    margin-left: 30px;
+    position: relative;
+}
+
+.sideBarDropdown li {
+    font-size: medium;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sideBarDropdownMenu li {
+    font-size: medium;
+    margin: 10px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
