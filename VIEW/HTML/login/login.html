@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브레드 포털정보시스템</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 803px;
+            color: 6C6C6C;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            background-size: cover; /* contain->에서 변경함*/
+            /* background-size: contain; */
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-image: url("/RESOURCES/IMAGE/login/학교%20메인%20배경.jpg");
+            opacity: 0.7;
+        }
+
+        #content {
+            background: rgba(255, 255, 255, 0.89);
+            padding: 20px;
+            /* border-radius: 10px; */
+            width: 1700px;
+            height: 1245px; 
+            text-align: left;
+            display: flex;
+            justify-content: space-around;
+            }
+
+        #leftContent {
+            width: 510px;
+            height: 760px;
+            margin-left: 65px;
+            margin-top: 300px;
+        }
+
+        #new_events{ /* 브레드뉴스/행사안내 */
+            display: flex;
+            /* flex-direction: row; 가로 정렬  */
+            font-size: 20px;
+            color:rgba(0, 0, 0, 0.685);
+        }
+
+        #new_events_board{
+            display: flex;
+            flex-direction: row;
+            margin: 10px 0 10px 0 ;
+            padding: 5px;
+            gap: 15px;
+             border-bottom: 1px solid black; /* 글자 아래 검은 선*/ 
+            
+
+        }
+
+        #news, #events {
+            display: flex;
+            /* flex-direction: row;  가로 정렬  */
+            cursor: pointer;
+            /* margin-bottom: 10px; */
+            font-size: 16px;
+            text-decoration: none; /* 밑줄 숨기기 */
+            /* text-decoration: underline; 텍스트 아래 밑줄 추가해줌 */
+        }
+
+        #boardContainer { /* 뉴스 및 행사 안내 목록들*/
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column; /* 뉴스 세로 정렬 */
+            /* flex-wrap: wrap; */
+        }
+
+        .board {
+            width: 60%;
+            background: rgba(247, 244, 244, 0); 
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px; /* 뉴스 목록들 글 세로 간격 */
+        }
+
+        #icons { /* 상단에 있는 아이콘들 부모*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 95px;
+            width: 50%; 
+            
+        }
+
+        .icon { /* 상단 아이콘들*/ 
+            width: 145px;
+            height: 119px;
+             /* background-color: #ffffff;아이콘 배경색 */
+            /* border-radius: 10px; 테두리 둥글게 만드는 속성*/
+            display: flex;
+            flex-direction: column; /* 세로로 배열되도록 설정 */
+            align-items: center;
+            /* justify-content: center; */
+            color: rgb(20, 20, 20);
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        img{
+            width: 55px;
+            height: 55px;
+        }
+
+        #icons2{ /* 불편/건의사항 및 Q&A 아이콘들 부모 */
+            width: 100%;
+            display: flex;
+            /* flex-direction: row; */
+            /* justify-content: space-between; 가로로 간격을 벌리기 위해 사용 */
+            /* align-items: flex-start; */
+            /* grid-template-columns: repeat(2, 1fr); /*Grid 레이아웃에서 그리드 컨테이너의 열(Column) 크기를 정의*/
+            /* gap: 10px; */
+            /* margin-top: 95px; */
+        }
+
+        .icon2{ /* 불편/건의사항 및 Q&A 아이콘 */
+            width: 145px;
+            height: 119px;
+             /* background-color: #ffffff;아이콘 배경색 */
+            display: flex;
+            /* flex-direction: row; */
+            align-items: center;
+            /* justify-content: center; */
+            color: rgb(20, 20, 20);
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .ask{  /* 브레드 바란다 부터 아래 아이콘 묶음 */
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column; /* ask 클래스의 자식 요소를 세로로 배열하도록 변경 */
+           
+        }
+
+        .ask_bread{ /* 브레드에 바란다 */
+            color:rgba(0, 0, 0, 0.6000000238418579);
+	        width:510px;
+	        height:21px;
+	        /* position:absolute; */
+	        top:620px;
+	        text-align: left;
+	        letter-spacing:0; /* 글자 사이의 간격 조절*/
+	        line-height:1px; /* 텍스트 줄 사이의 간격 */
+            border-bottom: 1px solid black; /* 글자 아래 검은 선*/ 
+            margin-bottom: 20px;
+            
+        }
+         
+        /* .proposal{ /* 불편/건의사항 */
+            /* color:rgba(40.37499949336052, 40.37499949336052, 40.37499949336052, 1);
+	        width:83px;
+	        height:24px;
+	        position:absolute;
+	        left:220px;
+	        top:700px;
+	        text-align:center;
+	        font-size:14px;
+	        letter-spacing:0;
+	        line-height:px;
+        } */
+
+        /* .Question_Answer{  Q&A */
+        	/* color:rgba(40.37499949336052, 40.37499949336052, 40.37499949336052, 1);
+        	width:31px;
+        	height:24px;
+        	position:absolute;
+        	left:449px;
+        	top:700px;
+        	font-family:Inter;
+        	text-align:center;
+        	font-size:14px;
+        	letter-spacing:0;
+        	line-height:px;
+        } */
+
+        
+        #rightContent {
+            width: 555px;
+            height: 760px;
+            margin-top: 400px;
+            text-align: center;
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* align-items: center; */
+        }
+
+        .breadPortal_top {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 0 10px;
+        }
+
+        .breadPortal_top img {
+        margin-right: -10px; /* 이미지와 텍스트 간격 조절 */
+        }
+
+        .breadPortal_top2 {
+          /* margin-left: 20px; */
+            /* flex-direction: column;
+            display: flex;
+            align-items: center; */
+        }
+
+        
+        #breadPortal_name{ /* 브레드 포탈정보 시스템 글씨*/
+            font-size: 35px;
+            margin-right: 0px;
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
+            /* cursor: pointer;
+            align-items: center; 수직 가운데 정렬    */
+        }
+
+        /* #breadPortal_name img {
+        margin-right: 5px; 이미지와 텍스트 사이의 간격 조절
+        } */
+
+        #breadPortal_name_en{ /* 포탈 시스템 영문 글씨*/
+            font-size: 18px;
+            margin-bottom: 10px;
+            /* text-decoration: underline; */ /* 밑줄 */
+            /* color: rgba(0, 0, 0, 0.6000000238418579);
+            width: 372px;
+            height: 21px;
+            position: absolute;
+            top: 195px;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 0; */
+        }
+
+        .breadPortal_bottom{ 
+            margin-top: 400px;
+        }
+
+        #quote {
+            font-size: 25px;
+            color: #084e02;
+            }
+
+        /* #bread_name{
+            margin-bottom: 50px;
+        }     */
+
+        #loginButton {
+            margin-top: 50px;
+            background-color: #084e02;
+            color: white;
+            padding: 18px 150px; /* 로그인 버튼 배경 크기*/
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <div id="leftContent">
+            <div id="new_events">브레드뉴스/행사안내</div>
+                <ul id="new_events_board">
+                    <li id="news"><a href="/ask/news">뉴스</a></li>
+                    <li id="events"><a href="">행사안내</a></li>
+                </ul>
+
+                <div id="boardContainer">
+                     <div class="board">뉴스1</div>
+                     <div class="board">뉴스2</div>
+                     <div class="board">뉴스3</div>
+                     <div class="board">뉴스4</div>
+                     <div class="board">뉴스5</div>
+                </div>
+
+            <div id="icons">
+                <div class="icon" onclick="location.href='링크1';">
+                    <img src="/RESOURCES/IMAGE/Icon/학생정보시스템.png" alt="학생정보시스템">학생정보시스템
+                </div>
+
+                <div class="icon" onclick="location.href='링크2';">
+                    <img src="/RESOURCES/IMAGE/Icon/성적관리.png" alt="성적관리">성적관리
+                </div>
+
+                <div class="icon" onclick="location.href='링크3';">
+                    <img src="/RESOURCES/IMAGE/Icon/분실물.png" alt="분실물">분실물
+                </div>
+
+                <div class="icon" onclick="location.href='링크4';">
+                    <img src="/RESOURCES/IMAGE/Icon/Butter Connet.png" alt="Butter Connet">Butter Connet
+                </div>
+
+                <div class="icon" onclick="location.href='링크5';">
+                    <img src="/RESOURCES/IMAGE/Icon/시간표.png" alt="강의 조회">강의 조회
+                </div>
+
+                <div class="icon" onclick="location.href='링크6';">
+                    <img src="/RESOURCES/IMAGE/Icon/수강신청.png" alt="수강신청">수강신청
+                </div>
+            </div> <!-- icons -->
+        
+
+            <div class="ask">
+                <span  class="ask_bread"> 브레드에 바란다 Ask for BREAD</span>
+                <div id="icons2">
+                    <div class="icon2" onclick="location.href='링크7';">
+                        <img src="/RESOURCES/IMAGE/Icon/불편_건의사항.png" alt="불편/건의사항">불편/건의사항
+                    </div>
+                
+                    <div class="icon2" onclick="location.href='링크8';">
+                        <img src="/RESOURCES/IMAGE/Icon/Q&A.png" alt="Question_Answer">Q&A
+                    </div>
+                </div>
+            </div>
+        </div> <!-- left content -->
+
+        <div id="rightContent">
+
+            <div class="breadPortal_top">
+                <img src="/RESOURCES/IMAGE/logo/imageLogo.png" alt="브레드포탈정보시스템" style="width: 150px; height: 90px;">
+
+                <div calss="breadPortal_top2">
+
+                    <div id="breadPortal_name" onclick="location.href='링크9';"   style="font-weight: bold;">
+                        브레드 포탈정보시스템
+                    </div>
+
+                    <div id="breadPortal_name_en" style="font-weight: bold;     margin-top: 5px;">BREAD PORTAL INFORMATION SYSTEM</div>
+                </div>
+
+            </div> <!-- breadPortal_top -->
+
+            <div class="breadPortal_bottom">
+                <div id="quote">"그대의 빛으로 우리가 빛을 보리라"</div>
+                <dix id="bread_name">BREAD UNIVERSITY</div>
+                <button id="loginButton">로그인(Login)</button>
+            </div>
+
+        </div> <!-- rightContent -->
+
+    </div> <!-- content -->
+
+
+</body>
+</html>
