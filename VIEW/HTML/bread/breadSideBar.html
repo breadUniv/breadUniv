@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/allStyle/allStyle.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/main/main.css">
-    <link rel="stylesheet" href="/RESOURCES/JS/main.js">
-    <title>main</title>
+    <title>sideBar</title>
 </head>
 <body>
-    
+
     <div class="sideBarBackground">
 
         <div class="sideBarTopBackground">
             <div class="sideBarTopContainer">
-                <img src="/RESOURCES/IMAGE/logo/005.png" alt="">
+                <img src="/RESOURCES/IMAGE/logo/005.png" alt="sideBarTopImage">
                 <p>통합정보시스템</p>
             </div>
         </div>
@@ -25,29 +19,28 @@
         <div class="sideBarDropdown">
 
             <ul class="sideBarDropdownToggle">
-                <li><a href="#">마이페이지</a>
-                    <ul class="sub">
+                <li class="sideBarDropdownClick"><a href="#">마이페이지</a>
+                    <ul class="subToggle"> 
                         <li><a href="#">개인정보수정</a></li>
                         <li><a href="#">시간표조회</a></li>
                         <li><a href="#">수강신청조회</a></li>
                     </ul>
                 </li>
         
-                <li><a href="#">학사행정</a>
-                    <ul class="sub">
+                <li class="sideBarDropdownClick"><a href="#">학사행정</a>
+                    <ul class="subToggle">
                         <li><a href="#">휴학 및 자퇴신청</a></li>
                     </ul>
                 </li>
                 
-                <li><a href="#">강의조회</a></li>
-                <li><a href="#">수강신청</a></li>
-                <li><a href="#">성적관리</a></li>
+                <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
+                <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
+                <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
             </ul>
-        </div>
 
-        </div> <!-- sideBarDropdown -->
+        </div> <!-- sideBarDropdownToggle -->
 
     </div> <!-- sideBarBackground -->
-
+    
 </body>
 </html>
