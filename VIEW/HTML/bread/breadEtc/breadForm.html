@@ -7,23 +7,20 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadMypage/breadMypage.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadMypage/breadEdit.css">
     <!-- 변경해야할 JS 링크 -->
-    <script src="/RESOURCES/JS/bread/breadMˆypage.js"></script>
+    <script src="/RESOURCES/JS/bread/breadMypage.js"></script>
     <title>main</title>
 </head>
 <body>
     <div class="mainContainer">
 
         <article>
-            <div class="header" style="height: 10%;">
+            <div class="header">
                 <div class="headerBackground">
                     <div class="headerMenu">
                         <div class="headerMenuClick">
-                            <span>마이페이지</span>
-                            <span>뉴스센터</span>
-                            <span>브레드에 바란다</span>
-                            <span>분실물</span>
+                            <span>포탈정보시스템</span>
                             <span>버터커넥트</span>
                         </div>
                         <div class="searchBox">
@@ -37,60 +34,24 @@
                 </div> <!-- headerBackground -->
             </div> <!-- header -->
 
-            <div class="section01" style="height: 90%;">
+            <div class="section01">
 
                 <p>마이페이지</p>
                 <br><br><br>
-                    <div class="titleMenu">
-                        <span>개인정보수정</span>
-                        <span>시간표조회</span>
-                        <span>수강신청조회</span>
-                        <br><br>
-                        <hr>
-                        <br>
-                    </div> <!-- titleMenu -->
-
-                    <br><br><br><br><br>
-
-                    <div class="profileButton">
-                        <img src="/RESOURCES/IMAGE/profile/경진새.jpeg" alt="profileImage" id="profileImage">
-                        <input type="file" id="imageUploadInput" style="display: none;">
-                        <button id="editProfileButton">프로필수정</button>
-                        <button id="deleteProfileButton">프로필삭제</button>
-                    </div>
-
-                    <br><br><br>
-
-                    <div class="listContainer">
-                        <div class="nameList">
-                            <li>이름</li>
-                            <li>학부</li>
-                            <li>학과</li>
-                            <li>학번</li>
-                            <li>비밀번호</li>
-                            <li>핸드폰번호</li>
-                            <li>이메일</li>
-                            <li>주소</li>
-                        </div>
-                        <div class="inputList">
-                            <li><input type="text"></li>
-                            <li><input type="text"></li>
-                            <li><input type="text"></li>
-                            <li><input type="text" id="number"></li>
-                            <li><input type="text" id="password"><input type="text" id="passwordCheck"></li>
-                            <li><input type="text" id="phoneNumber"><button>수정</button></li>
-                            <li><input type="text" id="email"><input type="text" id="emailCheck"><button>인증번호받기</button></li>
-                            <li><input type="text" id="address"><input type="text" id="secondAddress"></li>
-                            <li><input type="text" id="post"><button>수정</button></li>
-                        </div>
-                  </div> <!-- listContainer -->
+                <div class="titleMenu">
+                    <span>개인정보수정</span>
+                    <span>시간표조회</span>
+                    <span>수강신청조회</span>
+                    <br><br>
+                    <hr>
+                    <br>
+                </div> <!-- titleMenu -->
+                        
                 <br><br><br><br><br><br><br><br>
-            <button class="saveButton">저장</button>
+                    <button class="saveButton">저장</button>
                 <br><br><br><br><br><br>
 
-        </div> <!-- section01 -->
-
-            
+            </div> <!-- section01 -->
         </article>
   
     <div class="sideBarBackground">
@@ -115,13 +76,25 @@
         
                 <li class="sideBarDropdownClick"><a href="#">학사행정</a>
                     <ul class="subToggle">
-                        <li><a href="#">휴학 및 자퇴신청</a></li>
+                        <li><a href="#">휴학 및 자퇴신청</a></li> 
                     </ul>
                 </li>
                 
                 <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
                 <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
                 <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
+
+                <li class="sideBarDropdownClick"><a href="#">브레드에바란다</a>
+                    <ul class="subToggle">
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">불편/건의사항</a></li> 
+                    </ul>
+                </li>
+
+                <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
+
+                <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
+
             </ul>
 
         </div> <!-- sideBarDropdownToggle -->

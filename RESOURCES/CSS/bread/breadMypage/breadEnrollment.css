@@ -23,6 +23,7 @@ article {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 20px;
 }
 
 .headerBackground {
@@ -41,6 +42,14 @@ article {
     color: #6c6c6c;
     align-items: center;
 }
+
+.headerMenuClick > span,
+.searchBox > label,
+.logOut > span {
+    width: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+}
  
 .headerMenuClick {
     display: flex;
@@ -51,6 +60,7 @@ article {
 
 .headerMenuClick span:hover {
     font-weight: bolder;
+    color: #456E2A;
 }
 
 .logOut span {
@@ -59,6 +69,7 @@ article {
 
 .logOut span:hover {
     font-weight: bolder;
+    color:#456E2A;
 }
 
 .searchBox {
@@ -75,6 +86,23 @@ article {
     outline: none;
 }
 
+.searchBox > button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.searchBox > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
 .section01 {
     margin: 100px 0px 200px 300px;
 }
@@ -83,6 +111,10 @@ article {
     font-size: 30px;
     font-weight: bolder;
     color:#456E2A;
+}
+
+.section01Container {
+    width: 1000px;
 }
 
 .titleMenu span {
@@ -269,6 +301,7 @@ article {
     margin-right: 10px;
     border-radius: 5px;
     border: 0.5px solid #b9b9b9;
+    outline: none;
 }
 
 .inputList button {
@@ -304,4 +337,137 @@ article {
 .saveButton:hover {
     background-color:#DAE2D4;
     color: #000;
+}
+
+.titleContainer {
+    width: 1000px;
+    display: flex;
+}
+
+.titleContainer > * {
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+.boardContainer > * {
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+input {
+    width: 180px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
+}
+
+select {
+    width: 180px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    position: absolute;
+    margin-left: 52px;
+}
+
+.dropdown-content li {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 180px;
+    cursor: pointer;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.borderContainer {
+    align-items: center;
+}
+
+.boarderTitle {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boarderTitle span {
+    width: 200px;
+    text-align: center;
+}
+
+.boardContainer hr {
+    border: 0.1px solid #d9d9d9;
+    width: 1000px;
+}
+
+.board {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.board span {
+    width: 200px;
+    text-align: center;
+}
+
+.sortContainer button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+}
+    
+.sortcontainer button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.buttonPage {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color:#6c6c6c;
+}
+
+.buttonArrow {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color:#6c6c6c;
 }
