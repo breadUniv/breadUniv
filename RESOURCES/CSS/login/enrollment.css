@@ -33,3 +33,111 @@ html {
     align-items: center;
     margin: 0px;
 }
+
+.enrollment_page{
+     /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* width: auto; */
+    margin-top: 200px;
+}
+
+.enrollmentContainer {
+   text-align: left;
+   width:auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.nameInput, 
+.passwordInput,
+.phoneInput,
+.emailInput,
+.postCode,
+.addressDetailsInput,
+.department,
+.undergraduate {
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.enrollmentContainer li {
+    list-style: none;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+input, select {
+    height: 33px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input{
+    margin-right: 5px;
+}
+
+.nameInput input,
+.phoneInput input,
+.addressDetailsInput input{
+    width: 350px
+}
+
+.passwordInput input,
+.emailInput input,
+.postCode input{
+    width: 165px
+}
+
+
+
+select {
+    height: 48px;
+    /* font-size: 14px; */
+}
+
+.department select, .undergraduate select{
+    width: 365px 
+}
+
+ /* select{
+    width: 200px;
+} */
+
+#find_Button{
+    margin-top: 20px;
+    margin-left: 12px;
+    background-color: #456E2A;
+    color: #fff;
+    padding: 14px 132px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#ccNumberButton{ /*인증번호 받는 버튼 */
+    width: 105PX;
+    height: 45PX;
+    background-color: #456E2A;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#undergraduateList,
+#departmentList{
+   font-size: 14px;
+}
+
+.select option {
+    padding: 3px 0;
+
+}
+   
+

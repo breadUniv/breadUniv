@@ -13,58 +13,72 @@
 
             <div id="logo">
                 <!-- 대학교 로고 이미지를 사용하세요 -->
-                <img src="/RESOURCES/IMAGE/logo/005.png" onclick="goToLogin()" onmouserocer="changeCursor()" alt="University Logo"  width="300"> <!-- width="300"> -->
+                <img src="/RESOURCES/IMAGE/logo/005.png" onclick="goToLogin()" onmouserocer="changeCursor()" alt="University Logo"  width="300">
             </div>
 
             <div class="enrollmentContainer">
                 <div class="nameInput">
-                    <label for="InputLabel">이름</label>
+                    <li>이름</li>
                     <input type="text" id="nameInputText" placeholder="이름을 입력하세요">
                 </div>
 
                 <div class="passwordInput">
-                    <label for="InputLabel">비밀번호</label>
+                    <li>비밀번호</li>
                     <input type="password" id="passwordInputText" placeholder="비밀번호를 입력하세요">
                     <input type="password" id="passwordTwoInputText" placeholder="비밀번호를 다시 입력하세요">
                 </div>
  
                 <div class="phoneInput">
-                    <label for="InputLabel">핸드폰 번호</label>
+                    <li>핸드폰 번호</li>
                     <input type="text" id="phoneInputText" placeholder="이름을 입력하세요">
                 </div>
 
                 <div class="emailInput">
-                    <label for="InputLabel">이메일</label>
+                    <li>이메일</li>
                     <input type="email" id="emailInputText" placeholder="이메일을 입력하세요">
+                    <span class="ccNumber">
+                        <input type="number" id="ccNumber" placeholder="인증번호">
+                        <button id="ccNumberButton" onclick="numberInput()">인증번호받기</button>
+                    </span>
+                    
+                </div>  
+
+                <div class="postCode">
+                    <li>주소</li>
+                    <input type="text" id="postCode" placeholder="우편번호">
+                    <span class="addressInput">
+                        <input type="text" id="addressInputText" placeholder="주소">
+                    </span>
                 </div>
 
-                <span class="ccNumber">
-                    <input type="number" id="ccNumber" placeholder="인증번호">
-                    <button id="ccNumberButton" onclick="numberInput()">인증번호받기</button>
-                </span>
-
-
-                <div class="addressInput">
-                    <label for="InputLabel">주소</label>
-                    <input type="text" id="addressInputText" placeholder="주소">
-                </div>
-
-                <span class="addressInput">
-                    <label for="addressDetails"></label>
+                <div class="addressDetailsInput">
+                    <li></li>
                     <input type="text" id="addressDetails" placeholder="상세주소">
-                <span>
+                </div>
 
+                <div class="department">
+                    <li>학과</li>
+                    <select id="departmentList">
+                        <option value="1">시각디자인</option>
+                        <option value="2">국어국문 </option>
+                        <option value="3">서양사학</option>
+                    </select>
+                </div>
 
+                <div class="undergraduate">
+                    <li>학부</li>
+                    <select id="undergraduateList"> 
+                        <option value="1">조형예술</option>
+                        <option value="2">인문 </option>
+                        <option value="3">사회</option>
+                    </select>  
+                </div>
 
-
-  
             </div> <!-- enrollmentContainer-->
-
-            
 
             <button id="find_Button" onclick="findPassword()">비밀번호 찾기</button><br><br><br><br>
 
-        </div> <!-- pwd_find_page-->
+        </div> <!-- enrollment_page-->
     </div>  <!-- content -->
 </body>
 </html>
