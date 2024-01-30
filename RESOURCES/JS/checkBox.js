@@ -1,13 +1,35 @@
+// 체크박스
 window.onload = function() {
-    document.getElementById("boarderTitleCheckbox").addEventListener("change", function() {
-        var isChecked = this.checked;
-
-        // 모든 클래스명이 "boardCheckbox"인 요소를 찾습니다.
-        var checkboxes = document.querySelectorAll(".boardCheckbox");
-
-        // 찾은 모든 요소에 대해 반복하면서 체크 상태를 변경합니다.
-        checkboxes.forEach(function(checkbox) {
-            checkbox.checked = isChecked; // 현재 체크박스의 상태와 동일하게 설정
+    var boarderTitleCheckbox = document.getElementById("boarderTitleCheckbox");
+    if (boarderTitleCheckbox) {
+        boarderTitleCheckbox.addEventListener("change", function() {
+            var isChecked = this.checked;
+            var checkboxes = document.querySelectorAll(".boardCheckbox");
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = isChecked;
+            });
         });
-    });
+    }
 };
+
+    // html
+    // <div class="boardContainer">
+    //     <div class="boarderTitle">
+    //         <input type="checkbox" id="boarderTitleCheckbox">
+    //         <span>글번호</span>
+    //         <span class="title">글제목</span>
+    //         <span>작성자</span>
+    //         <span>조회수</span>
+    //         <span>작성일</span>
+    //     </div>
+    //         <br><hr><br>    
+            
+    //     <div class="board">
+    //         <input type="checkbox" class="boardCheckbox">
+    //         <span>1</span>
+    //         <span class="title">[공지사항] 빵 많이먹으면 배부르니까 조심하세요</span>
+    //         <span>관리자</span>
+    //         <span>2213</span>
+    //         <span>2024-01-25</span>
+    //     </div>
+    // </div>

@@ -171,6 +171,17 @@ article {
     justify-content: space-between;
 }
 
+.boarderTitle > label {
+    display: flex;
+    align-items: center;
+}
+
+.boarderTitle > input {
+    width: 800px;
+    height: 30px;
+    outline: none;
+}
+
 .boarderTitle > span.title {
     width: 800px;
 }
@@ -187,12 +198,16 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    justify-content: space-between;
     margin-left: 100px;
 }
 
-.board > p {
+.board > label {
+    margin-right: 88px;
+}
+
+.board > textarea {
     width: 800px;
+    outline: none;
 }
 
 .pagination {

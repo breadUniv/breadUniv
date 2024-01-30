@@ -77,3 +77,30 @@ select {
     background-color:#DAE2D4;
     color: #000;
 }
+
+.manageButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.manageButton > select {
+    margin-right: -10px;
+    margin-left: 40px;
+}
+
+.manageButton > button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-right: 20px;
+}
+
+.manageButton > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}

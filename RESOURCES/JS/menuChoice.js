@@ -12,3 +12,13 @@
                 });
             });
         });
+
+        //html
+        // <div class="titleMenu">
+        //     <span>개인정보수정</span>
+        //     <span>시간표조회</span>
+        //     <span>수강신청조회</span>
+        //     <br><br>
+        //     <hr>
+        //     <br>
+        // </div> <!-- titleMenu -->
