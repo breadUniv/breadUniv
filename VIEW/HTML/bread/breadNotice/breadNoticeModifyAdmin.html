@@ -7,12 +7,15 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadNews/breadNotice.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadNotice/breadNoticeModifyAdmin.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadheader.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadfooter.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
     <!-- 변경해야할 JS 링크 -->
     <script src="/RESOURCES/JS/bread/breadSideBar.js"></script>
-    <script src="/RESOURCES/JS/bread/breadNotice.js"></script>
     
-    <title>breadNotice</title>
+    <title>breadNoticeModifyAdmin</title>
 </head>
 <body>
     <div class="mainContainer">
@@ -26,8 +29,8 @@
                             <span>버터커넥트</span>
                         </div>
                         <div class="searchBox">
-                            <label for="searchInput">검색</label>&nbsp;&nbsp;
                             <input type="text">
+                            <button>검색</button>
                         </div>
                         <div class="logOut">
                             <span>로그아웃</span>
@@ -39,72 +42,56 @@
             <div class="section01">
 
                 <div class="section01Container">
-                    <p>공지사항</p>
+                    <div class="titleText">
+                        <p>공지사항</p>
+                    </div>
 
                     <br><br><br><br><br>
 
-                <div class="titleContainer">
-                    <div class="searchContainer">
-                        <label for="search ">검색</label>
-                        <input type="text">
-                    </div>
-                
-                    <div class="dropdown">
-                        <label for="category">카테고리</label>
-                        <select onclick="toggleDropdown()"></select>
-                        <div id="myDropdown" class="dropdown-content">
-                          <li>공지사항</li>
-                          <li>브레드뉴스</li>
-                          <li>행사안내</li>
+                        <div class="manageButton">
+                            <div class="adminButton">
+                                <button>수정</button>
+                                <button>삭제</button>
+                            </div>
                         </div>
-                    </div>
-                
-                    <div class="sortContainer">
-                        <label for="sort">정렬조건</label>
-                        <input type="text">
-                        <button>검색</button>
-                    </div>
-                </div> <!-- titleContainer -->
 
-                    <br><br><br><br><br><br>
+                    <br><br><br><br><br>
 
-                <div class="boardContainer">
-                    <div class="boarderTitle">
-                        <span>글번호</span>
-                        <span>글제목</span>
-                        <span>작성자</span>
-                        <span>조회수</span>
-                        <span>작성일</span>
-                    </div>
-                    <br>
+                    <div class="boardContainer">
+                        <div class="boarderTitle">
+                            <label for="title">제목</label>
+                            <input type="text">
+                            <span>2024-01-30</span>
+                        </div>
+                        <br><br>
+                        <hr>
+                        <br><br><br>
+                        <div class="board">
+                            <label for="boardText">내용</label>
+                            <textarea name="boardText" id="boardText" cols="30" rows="10">
+                                2024학년도 신입생 여러분, 
+                                버터가 가득한 빵 유행으로인해 강의 중 뛰쳐나가서 빵을 사먹는 브레드인이 많이 늘었다고 합니다
+                                그 결과로 교수님 마저 강의 중 나가는 경우가 발생하여 당분간 빵 판매 및 구매를 금지하오니 다들 참고 부탁드립니다.
+                            </textarea>
+                        </div>
+                    
+                    </div> <!-- boardContainer -->
+                    
+                    <br><br><br>
+
                     <hr>
-                    <br>    
-                    <div class="board">
-                        <span>1</span>
-                        <span>[공지사항] 빵 많이먹으면 배부르니까 조심하세요</span>
-                        <span>관리자</span>
-                        <span>10</span>
-                        <span>2024-01-25</span>
+
+                    <br><br><br>
+
+                    <div class="saveButton">
+                        <button>이전으로</button>
                     </div>
-                
-                </div> <!-- boardContainer -->
-                <br>
+    
+                </div> <!-- section01Container -->
 
-                <br><br><br><br><br>
+            </div> <!-- section01 -->
 
-                <div class="pagination">
-                    <button class="buttonArrow"><<</button>&nbsp;
-                    <button class="buttonPage">1&nbsp;</button>
-                    <button class="buttonPage">2&nbsp;</button>
-                    <button class="buttonPage">3</button>&nbsp;
-                    <button class="buttonArrow">>></button>
-                </div>
-
-            </div> <!-- section01Container -->
-            
-        </div> <!-- section01 -->
-            <br><br><br><br><br>
-        </article>
+    </article>
   
     <div class="sideBarBackground">
 

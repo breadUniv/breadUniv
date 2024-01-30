@@ -52,4 +52,41 @@
                     });
                 });
             });
-    
+
+        // html
+        //    <div class="sideBarDropdown">
+
+        //         <ul class="sideBarDropdownToggle">
+        //             <li class="sideBarDropdownClick"><a href="#">마이페이지</a>
+        //                 <ul class="subToggle"> 
+        //                     <li><a href="#">개인정보수정</a></li>
+        //                     <li><a href="#">시간표조회</a></li>
+        //                     <li><a href="#">수강신청조회</a></li>
+        //                 </ul>
+        //             </li>
+            
+        //             <li class="sideBarDropdownClick"><a href="#">학사행정</a>
+        //                 <ul class="subToggle">
+        //                     <li><a href="#">휴학 및 자퇴신청</a></li> 
+        //                 </ul>
+        //             </li>
+
+        //             <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
+        //             <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
+        //             <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
+
+        //             <li class="sideBarDropdownClick"><a href="#">브레드에바란다</a>
+        //                 <ul class="subToggle">
+        //                     <li><a href="#">Q&A</a></li>
+        //                     <li><a href="#">불편/건의사항</a></li> 
+        //                 </ul>
+        //             </li>
+
+        //             <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
+
+        //             <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
+        //         </ul>
+
+        //     </div> <!-- sideBarDropdownToggle -->
+
+        // </div> <!-- sideBarBackground -->

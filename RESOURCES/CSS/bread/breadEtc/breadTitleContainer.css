@@ -1,0 +1,106 @@
+.titleContainer > * {
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+.searchContainer input {
+    width: 180px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
+}
+
+select {
+    width: 180px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    position: absolute;
+    margin-left: 52px;
+}
+
+.dropdown > option {
+    font-size: 20px;
+}
+
+.dropdownButton button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+    }
+    
+.dropdownButton button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.adminButton {
+    margin-left: 20px;
+}
+
+.adminButton > button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.adminButton button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.manageButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.manageButton > select {
+    margin-right: -10px;
+    margin-left: 40px;
+}
+
+.manageButton > button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-right: 20px;
+}
+
+.manageButton > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
