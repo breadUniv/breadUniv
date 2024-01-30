@@ -22,10 +22,14 @@ article {
     margin: 100px 0px 200px 300px;
 }
 
-.section01 p {
+.titleText p {
     font-size: 30px;
     font-weight: bolder;
     color:#456E2A;
+}
+
+.section01Container {
+    width: 1000px;
 }
 
 .titleMenu span {
@@ -143,19 +147,73 @@ article {
     color: #000;
 }
 
-.categoryToggle {
-    position: relative;
-    display: inline-block;
+.titleContainer {
+    width: 1000px;
+    display: flex;
 }
 
-.categoryToggle ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    position: absolute;
+.boardContainer > * {
+    font-size: 14px;
+    color: #6c6c6c;
 }
 
-.categoryToggle ul li {
-    display: block;
+.borderContainer {
+    align-items: center;
+}
+
+.boarderTitle {
+    width: 1000px;
+    padding-left: 100px;
+}
+
+.boarderTitle > label {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.boarderTitle span {
+    width: 200px;
+    text-align: center;
+}
+
+.boardContainer hr {
+    border: 0.1px solid #d9d9d9;
+    width: 1000px;
+}
+
+.board {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.board span {
+    width: 200px;
+    text-align: center;
+}
+
+.board > textarea {
+    width: 1000px;
+    padding:50px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.buttonPage {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color:#6c6c6c;
+}
+
+.buttonArrow {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color:#6c6c6c;
 }

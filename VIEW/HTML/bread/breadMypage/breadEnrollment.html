@@ -8,8 +8,14 @@
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadMypage/breadEnrollment.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadheader.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadfooter.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
     <!-- 변경해야할 JS 링크 -->
-    <script src="/RESOURCES/JS/bread/breadMypage.js"></script>
+    <script src="/RESOURCES/JS/menuChoice.js"></script>
+    <script src="/RESOURCES/JS/sideBar.js"></script>
+
     <title>breadEnrollment</title>
 </head>
 <body>
@@ -24,8 +30,8 @@
                             <span>버터커넥트</span>
                         </div>
                         <div class="searchBox">
-                            <label for="searchInput">검색</label>&nbsp;&nbsp;
                             <input type="text">
+                            <button>검색</button>
                         </div>
                         <div class="logOut">
                             <span>로그아웃</span>
@@ -37,8 +43,10 @@
             <div class="section01">
 
                 <div class="section01Container">
+                    <div class="titleText">
+                        <p>수강신청조회</p>
+                    </div>
 
-                    <p>수강신청조회</p>
                     <br><br><br>
                     <div class="titleMenu">
                         <span>개인정보수정</span>
@@ -59,19 +67,23 @@
                     
                         <div class="dropdown">
                             <label for="category">카테고리</label>
-                            <select onclick="toggleDropdown()"></select>
-                            <div id="myDropdown" class="dropdown-content">
-                              <li>공지사항</li>
-                              <li>브레드뉴스</li>
-                              <li>행사안내</li>
-                            </div>
+                            <select>
+                                <option value="list">전체</option>
+                                <option value="list">전공필수</option>
+                                <option value="list">전공</option>
+                                <option value="list">교양</option>
+                            </select>
+                        </div>
+
+                        <div class="dropdown">
+                            <label for="sorting">정렬조건</label>
+                            <select>
+                                <option value="list">없음</option>
+                                <option value="list">강의번호 오름차순</option>
+                                <option value="list">강의번호 내림차순</option>
+                            </select>
                         </div>
                     
-                        <div class="sortContainer">
-                            <label for="sort">정렬조건</label>
-                            <input type="text">
-                            <button>검색</button>
-                        </div>
                     </div> <!-- titleContainer -->
 
                         <br><br><br><br><br><br>
@@ -80,6 +92,7 @@
                         <div class="boarderTitle">
                             <span>강의번호</span>
                             <span>교수명</span>
+                            <span>강의명</span>
                             <span>강의실</span>
                             <span>수업시간</span>
                             <span>강의분류</span>
@@ -91,11 +104,15 @@
                         <hr>
                         <br>    
                         <div class="board">
-                            <span>1</span>
-                            <span>[공지사항] 빵 많이먹으면 배부르니까 조심하세요</span>
-                            <span>관리자</span>
-                            <span>10</span>
-                            <span>2024-01-25</span>
+                            <span>240213</span>
+                            <span>김민하</span>
+                            <span>뉴미디어광고기초</span>
+                            <span>조형동/디자인관/101호</span>
+                            <span>월 10:00~12:50</span>
+                            <span>전공필수</span>
+                            <span>30</span>
+                            <span>25</span>
+                            <button>조회</button>
                         </div>
 
                     </div> <!-- boardContainer -->
