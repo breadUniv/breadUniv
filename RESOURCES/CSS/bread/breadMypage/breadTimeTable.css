@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+.mainContainer {
+    /* justify-content: space-between; */
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+article {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.headerBackground {
+    width: 98%;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+}
+
+.headerMenu {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #6c6c6c;
+    align-items: center;
+}
+
+.headerMenuClick > span,
+.searchBox > label,
+.logOut > span {
+    width: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+ 
+.headerMenuClick {
+    display: flex;
+    gap: 60px;
+    margin-right: 500px;
+    cursor: pointer;
+}
+
+.headerMenuClick span:hover {
+    font-weight: bolder;
+    color: #456E2A;
+}
+
+.logOut span {
+    cursor: pointer;
+}
+
+.logOut span:hover {
+    font-weight: bolder;
+    color:#456E2A;
+}
+
+.searchBox {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.searchBox > input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+}
+
+.searchBox > button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.searchBox > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.section01 {
+    margin: 100px 0px 200px 300px;
+}
+
+.section01 p {
+    font-size: 30px;
+    font-weight: bolder;
+    color:#456E2A;
+}
+
+.titleMenu span {
+    font-size: 15px;
+    cursor: pointer;
+    color: #b9b9b9;
+    margin-right: 25px;
+}
+
+.titleMenu span:hover {
+    color:#456E2A;
+    font-weight: bolder;
+}
+
+.titleMenu span.active {
+    color:#456E2A;
+    font-weight: bolder;
+}
+
+.titleMenu hr {
+    border: 0.1px solid #d9d9d9;
+    width: 800px;
+}
+
+.sideBarBackground {
+    width: 230px;
+    height: 100wh;
+    background-color: #fff;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.03);
+}
+
+.sideBarTopBackground {
+    width: 230px;
+    height: 200px;
+    background-color: #DAE2D4;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.sideBarTopContainer img {
+    width: 70%;
+    height: auto;
+    margin-top: -20px;
+}
+
+.sideBarTopContainer p {
+    font-size: 20px;
+    color: #456E2A;
+    margin-top: -15px;
+}
+
+.sideBarDropdown {
+    margin: 50px 0px 0px 30px;
+    position: relative;
+}
+
+.sideBarDropdown li {
+    font-size: medium;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.sideBarDropdownToggle li a {
+    font-size: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* 토글메뉴 */
+.subToggle {
+    font-size: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: none;
+    color: #b9b9b9;
+}
+
+.subToggle li > a:active,
+.subToggle li > a:hover {
+    color: #456E2A;
+    font-weight: bolder;
+}
+
+.subToggle li.active > a,
+.sideBarDropdownClick.active > a {
+    color: #456E2A;
+    font-weight: bolder;
+}
+
+.sideBarDropdownClick > a {
+    color: #b9b9b9;
+}
+
+.sideBarDropdownClick > a:active, 
+.sideBarDropdownClick > a:hover {
+    color: #456E2A;
+    font-weight: bolder;
+}
+
+.sideBarDropdownClick > a.active {
+    color: #456E2A;
+    font-weight: bolder;
+}
+
+.footerBackground {
+    width: 100wh;
+    height: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.footerText {
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #b9b9b9;
+}
+
+.footerTextFirst {
+    font-size: 20px;
+}
+
+.footerTextSecond {
+    font-size: 13px;
+}
+
+.profileButton button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profileButton button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.profileButton img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 45px;
+}
+
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+}
+
+.nameList {
+    text-align: left;
+}
+
+.nameList li {
+    width: 100px;
+    font-size: 14px;
+    color: #6c6c6c;
+    margin-top: 35px;
+    margin-bottom: 44px;
+}
+
+.inputList {
+    text-align: left;
+}
+
+.inputList input {
+    width: 200px;
+    height: 30px;
+    margin-top: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
+}
+
+.inputList button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.inputList button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.saveButton {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.saveButton:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.categoryToggle {
+    position: relative;
+    display: inline-block;
+}
+
+.categoryToggle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+}
+
+.categoryToggle ul li {
+    display: block;
+}
+
+.timeTable img{
+    width: 700px;
+    height: auto;
+}
