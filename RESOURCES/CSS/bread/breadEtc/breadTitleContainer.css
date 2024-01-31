@@ -1,10 +1,22 @@
+.titleContainer {
+    width: 1200px;
+    display: flex;
+}
+
 .titleContainer > * {
     font-size: 14px;
     color: #6c6c6c;
+    display: flex;
 }
 
-.searchContainer input {
-    width: 180px;
+.searchContainer > label {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+input {
+     width: 180px;
     height: 25px;
     margin-right: 20px;
     border-radius: 5px;
@@ -19,6 +31,10 @@ select {
     border-radius: 5px;
     border: 0.5px solid #b9b9b9;
     outline: none;
+}
+
+select#adminSelect {
+    margin-right: 0px;
 }
 
 .dropdown {

@@ -130,6 +130,11 @@ article {
 }
 
 .saveButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saveButton > button {
     width: 80px;
     height: 25px;
     border: none;
@@ -138,20 +143,12 @@ article {
     color:#fff;
     font-size: 12px;
     font-weight: medium;
-    margin-left: 50%;
-    cursor: pointer;
 }
 
 .saveButton:hover {
     background-color:#DAE2D4;
     color: #000;
 }
-
-.titleContainer {
-    width: 1200px;
-    display: flex;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -163,13 +160,17 @@ article {
 
 .boarderTitle {
     width: 1200px;
+    padding-left: 100px;
     display: flex;
     justify-content: space-between;
 }
 
+.boarderTitle > span.title {
+    width: 800px;
+}
+
 .boarderTitle span {
-    width: 200px;
-    text-align: center;
+    width: 100px;
 }
 
 .boardContainer hr {
@@ -180,20 +181,77 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    justify-content: space-between;
+    margin-left: 100px;
 }
 
-.board span {
-    width: 200px;
+.board > p {
+    width: 800px;
+    margin-left: 125px;
+}
+
+.comment {
+    margin-left: 100px;
+    font-size: 14px;
+    color:#6c6c6c;
+}
+
+.commentText {
+    display: flex;
+}
+
+.commentText > span {
+    display: flex;
     text-align: center;
+    align-items: center;
 }
 
-.board > input {
-    width: 17px;
+.commentText > p {
+    margin-left: 125px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
 }
 
-.boarderTitle > input {
-    width: 17px;
+.comment > button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.comment > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.comment > input {
+    margin-left: 150px;
+    width: 500px;
+    margin-right: 3px;
+}
+
+.commentText > button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.commentText > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
 }
 
 .pagination {
@@ -216,10 +274,8 @@ article {
     color:#6c6c6c;
 }
 
-.board > span.title {
-    width: 400px;
-}
-
-.boarderTitle > span.title {
-    width: 400px;
+.listButton > button {
+    display: flex;
+    margin-left:auto;
+    margin-right: 500px;
 }

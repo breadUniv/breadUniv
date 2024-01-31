@@ -150,11 +150,6 @@ article {
     color: #000;
 }
 
-.titleContainer {
-    width: 1200px;
-    display: flex;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -187,12 +182,12 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    justify-content: space-between;
     margin-left: 100px;
 }
 
 .board > p {
     width: 800px;
+    margin-left: 125px;
 }
 
 .pagination {
