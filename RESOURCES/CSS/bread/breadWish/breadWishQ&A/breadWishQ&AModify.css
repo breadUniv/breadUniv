@@ -129,24 +129,6 @@ article {
     color: #000;
 }
 
-.saveButton {
-    width: 80px;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color:#456E2A;
-    color:#fff;
-    font-size: 12px;
-    font-weight: medium;
-    margin-left: 70%;
-    cursor: pointer;
-}
-
-.saveButton:hover {
-    background-color:#DAE2D4;
-    color: #000;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -161,6 +143,17 @@ article {
     padding-left: 100px;
     display: flex;
     justify-content: space-between;
+}
+
+.boarderTitle > label {
+    display: flex;
+    align-items: center;
+}
+
+.boarderTitle > input {
+    width: 800px;
+    height: 30px;
+    outline: none;
 }
 
 .boarderTitle > span.title {
@@ -182,10 +175,18 @@ article {
     margin-left: 100px;
 }
 
-.board > p {
+.board > label {
+    margin-right: 80px;
+}
+
+.board > textarea {
     width: 800px;
-    text-align: left;
-    margin-left: 125px;
+    outline: none;
+    resize: none;
+    padding: 30px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
+    outline: none;
 }
 
 .pagination {

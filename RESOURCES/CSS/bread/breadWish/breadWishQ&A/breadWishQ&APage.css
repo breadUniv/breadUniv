@@ -129,24 +129,6 @@ article {
     color: #000;
 }
 
-.saveButton {
-    width: 80px;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color:#456E2A;
-    color:#fff;
-    font-size: 12px;
-    font-weight: medium;
-    margin-left: 70%;
-    cursor: pointer;
-}
-
-.saveButton:hover {
-    background-color:#DAE2D4;
-    color: #000;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -184,8 +166,72 @@ article {
 
 .board > p {
     width: 800px;
-    text-align: left;
     margin-left: 125px;
+}
+
+.comment {
+    margin-left: 100px;
+    font-size: 14px;
+    color:#6c6c6c;
+}
+
+.commentText {
+    display: flex;
+}
+
+.commentText > span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.commentText > p {
+    margin-left: 125px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.comment > button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.comment > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
+.comment > input {
+    margin-left: 150px;
+    width: 500px;
+    margin-right: 3px;
+}
+
+.commentText > button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.commentText > button:hover {
+    background-color:#DAE2D4;
+    color: #000;
 }
 
 .pagination {

@@ -150,11 +150,6 @@ article {
     color: #000;
 }
 
-.titleContainer {
-    width: 1200px;
-    display: flex;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -202,11 +197,16 @@ article {
 }
 
 .board > label {
-    margin-right: 88px;
+    margin-right: 80px;
 }
 
 .board > textarea {
     width: 800px;
+    outline: none;
+    resize: none;
+    padding: 30px;
+    border-radius: 5px;
+    border: 0.5px solid #b9b9b9;
     outline: none;
 }
 

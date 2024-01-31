@@ -147,11 +147,6 @@ article {
     color: #000;
 }
 
-.titleContainer {
-    width: 1200px;
-    display: flex;
-}
-
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
