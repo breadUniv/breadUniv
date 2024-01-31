@@ -215,9 +215,9 @@ body, div, li, p, td, th, ul, input{
     }
 
     .breadPortal_top {
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 0 10px;
     }
 
     .breadPortal_top img {
@@ -256,3 +256,9 @@ body, div, li, p, td, th, ul, input{
         border-radius: 10px;
         cursor: pointer;
     }
+
+    .board{
+        list-style-type: disc; /* 원형 마커(점) 사용 */
+    }  
+    
+
