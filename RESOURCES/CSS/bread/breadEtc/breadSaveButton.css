@@ -1,4 +1,11 @@
-.profileButton button {
+=
+
+.saveButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saveButton > button {
     width: 80px;
     height: 25px;
     border: none;
@@ -6,10 +13,11 @@
     background-color:#456E2A;
     color:#fff;
     font-size: 12px;
-    font-weight: 330;
-    cursor: pointer;
+    font-weight: medium;
 }
 
-.profileButton button:hover {
+.saveButton > button:hover {
     background-color:#DAE2D4;
+    color: #000;
 }
+
