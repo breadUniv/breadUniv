@@ -6,16 +6,18 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
-    <!-- <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css"> -->
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadWish/breadWishAdmin.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadNotice/breadNoticeModifyAdmin.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadheader.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadfooter.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
-    <!-- <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css"> -->
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread//breadAcademicAdministration/breadAcademicAdministration.css">
 
     <!-- 변경해야할 JS 링크 -->
     <script src="/RESOURCES/JS/menuChoice.js"></script>
     <script src="/RESOURCES/JS/sideBar.js"></script>
+    <script src="/RESOURCES/JS/bread/breadAcademicAdministration/breadAcademicAdministration.js"></script>
 
     <title>breadAcademicAdministration(학사행정)</title>
 </head>
@@ -49,9 +51,9 @@
                     </div>
 
                     <br><br><br>
+
                     <div class="titleMenu">
                         <span>휴학/자퇴신청</span>
-                        
                         <br><br>
                         <hr>
                         <br>
@@ -61,167 +63,212 @@
 
                     <div class="tbl_frm01">
                         <table>
-                            <colgroup>
-                                <col class="w180">
-                                <col>
-                            </colgroup>
                             <tbody>
                                 <tr>
                                     <th scope="row">이름</th>
                                     <td>
-                                        <input type="text" name="name" value="" required="" itemname="쿠폰명" class="required frm_input w300" style="background-repeat: no-repeat;">
+                                        <input type="text" name="name" class="frm_input w300">
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">학번</th>
+                                    <th>학번</th>
                                     <td>
-                                        <input type="text" name="studentId" value="" class="frm_input w300">
+                                        <input type="text" name="studentId" class="frm_input w300">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">학과</th>
                                     <td>
-                                        <input type="text" name="department" value="" class="frm_input w300">
+                                        <input type="text" name="department"  class="frm_input w300">
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">연락처</th>
+                                    <th>연락처</th>
                                     <td>
-                                        <input type="text" name="phone" value="" class="frm_input w300">
+                                        <input type="text" name="phoneNumber" class="frm_input w300" >
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">신청구분</th>
                                     <td class="td_label">
-                                        <label><input type="radio" name="cp_use" value="0" checked=""> 군휴학</label>
-                                        <label><input type="radio" name="cp_use" value="1"> 일반휴학</label>
-                                        <label><input type="radio" name="cp_use" value="2"> 자퇴</label>
+                                        <label><input type="radio" name="application_type" value="0">일반휴학</label>
+                                        <label><input type="radio" name="application_type" value="1">군휴학</label>
+                                        <label><input type="radio" name="application_type" value="2">자퇴</label>
+                                    </td>
+                                    <th>강의명</th>
+                                    <td>
+                                        <input type="text" name="lectureName" class="frm_input w300">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">강의명</th>
-                                    <td>
-                                        <input type="text" name="lectureName" value="" class="frm_input w300">
-                                    </td>
-                                </tr>
-                                <tr id="ids_date">
-                                    <th scope="row">신청기간</th>
-                                    <td>
-                                        <input type="date" name="cp_pub_sdate" value="" id="pub_sdate" class="frm_input w80 hasDatepicker"> <a href="javascript:chk_obj('cp_pub_sdate', '9999999999');" class="btn_small grey">무제한</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">신청기간</th>
-                                    <td class="td_label">
-                                        <div id="ids_inv_type0" class="mart7">
-                                            <input type="date" name="cp_inv_sdate" value="" id="inv_sdate" class="frm_input w80 hasDatepicker">
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <td><label for="application_semester">신청기간</label></td>
-                                <td>
-                                    <select id="application_semester" name="application_semester" required>
+                                    <th scope="application_semester">신청기간</th>
+                                    <td colspan="3">
+                                    <select id="application_semester" name="application_semester">
                                         <option value="2024">2024</option>
                                         <option value="2025">2025</option>
                                         <option value="2026">2026</option>
                                         <option value="2027">2027</option>
                                         <option value="2028">2028</option>
-                                    </select>학년도
-                                    <select id="application_semester" name="application_semester" required>
+                                    </select>&nbsp;학년도&nbsp;
+                                    <select id="application_semester" name="application_semester">
                                         <option value="1">1학기</option>
                                         <option value="2">2학기</option>
-                                    </select>&nbsp;부터
-                                    <select id="application_semester" name="application_semester" required>
+                                    </select>&nbsp;부터&nbsp;&nbsp;&nbsp;
+                                    <select id="application_semester" name="application_semester">
                                         <option value="2024">2024</option>
                                         <option value="2025">2025</option>
                                         <option value="2026">2026</option>
                                         <option value="2027">2027</option>
                                         <option value="2028">2028</option>
-                                    </select>&nbsp;학년도
-                                    <select id="application_semester" name="application_semester" required>
+                                    </select>&nbsp;학년도&nbsp;
+                                    <select id="application_semester" name="application_semester">
                                         <option value="1">1학기</option>
-                                        <option value="2ㄴ">2학기</option>
-                                    </select>학기&nbsp;까지
-                                </td>
+                                        <option value="2">2학기</option>
+                                    </select>&nbsp;까지&nbsp;
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th scope="row">휴학사유</th>
-                                    <td class="td_label">
-                                        <label><input type="radio" name="reason_type" value="0">건강문제</label>
-                                        <label><input type="radio" name="reason_type" value="1">일반휴학</label>
-                                        <label><input type="radio" name="reason_type" value="2">자퇴</label>
+                                    <td class="td_label" colspan="3">
+                                        <label><input type="radio" name="reason_type" value="0">개인사유</label>
+                                        <label><input type="radio" name="reason_type" value="1">군입대</label>
+                                        <label><input type="radio" name="reason_type" value="2">기타</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">사유</th>
-                                    <td>
-                                        <input type="text" name="reason" class="frm_input w80"> 
+                                    <td class="td_label" colspan="3">
+                                        <textarea name="reason" class="frm_input" style="width: 820px; height: 200px;" cols="50" rows="20" resize="none;"></textarea>
+                                        <!-- <inpud type="text" name="reason" class="frm_input w80" style="width: 820px; height: 200px;">  -->
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <br><br><br><br>
+                        
+                        <div class="manageButton">
+                            <div class="adminButton">
+                                <button>신청</button>
+                            </div>
+                        </div>
+                        
+                    </div><!-- tbl_frm01 -->
+                    
+                </div><!-- section01Container-->
+            </div> <!-- section01-->   
+            
+            <div class=" section02">
+                <div class="section02Container">
+                    <div class="titleText2">
+                        <p>휴학 및 자퇴 신청현황</p>           
                     </div>
-                    <div class="btn_confirm"> <!-- 이벤트 목록으로 가기 -->
-                        <input type="submit" value="저장" class="btn_large" accesskey="s">
-                        <a href="/templates/admin/coupon/admin.html" class="btn_large bx-white">목록</a>
-                    </div>
+                    <br><br>
+                    <!-- <div class="boardContainer">
+                        <div class="boarderTitle">
+                            <span>NO</span>
+                            <span>신청일자</span>
+                            <span>학년도</span>
+                            <span>학기</span>
+                            <span>신청구분</span>
+                            <span>학과</span>
+                            <span>접수여부</span>
+                            <span>취소일자</span>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>    
+                        <div class="board">
+                            <span>1</span>
+                            <span>2024-01-31</span>
+                            <span>2024</span>
+                            <span>1</span>
+                            <span>자퇴</span>
+                            <span>시각정보디자인</span>
+                            <span>신청</span>
+                            <span>2024-01-31</span>
+                            <span class="action">
+                                버튼을 동적으로 추가하기 위해 id 속성을 추가했습니다 -->
+                                <!-- <button id="cancelButton">취소하기</button>-->
+                        <!-- </div> -->
 
+                        <div class="tbl_head01">
+                            <table>
+                                <colgroup>
+                                    <col class="w20">
+                                    <col class="w80">
+                                    <col class="w50">
+                                    <col class="w50">
+                                    <col class="w50">
+                                    <col class="w50">
+                                    <col class="w100">
+                                    <col class="w50">
+                                    <col class="w80">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">NO</th>
+                                    <th scope="col">신청일자</th>
+                                    <th scope="col">학년도</th>
+                                    <th scope="col">학기</th>
+                                    <th scope="col"><a href=""></a>신청구분</th>
+                                    <th scope="col">학과</th>
+                                    <th scope="col">접수여부</th>
+                                    <th scope="col">취소일자</th>
+                                </tr>
+                                </thead>
+                                <tbody><tr><td colspan="9" class="empty_table">자료가 없습니다.</td></tr></tbody>
+                            </table>
+                        </div> <!-- tbl_head01 -->
 
-
-
-
-
-
+                    <!-- </div> boardContainer -->
+                </div> <!-- section02Container-->
+            </div> <!-- section02-->
 
         </article>
-  
-    <div class="sideBarBackground">
-
-        <div class="sideBarTopBackground">
-            <div class="sideBarTopContainer">
-                <img src="/RESOURCES/IMAGE/logo/005.png" alt="sideBarTopImage">
-                <p>통합정보시스템</p>
-            </div>
-        </div>
-
-        <div class="sideBarDropdown">
-
-            <ul class="sideBarDropdownToggle">
-                <li class="sideBarDropdownClick"><a href="#">마이페이지</a>
-                    <ul class="subToggle"> 
-                        <li><a href="#">개인정보수정</a></li>
-                        <li><a href="#">시간표조회</a></li>
-                        <li><a href="#">수강신청조회</a></li>
-                    </ul>
-                </li>
         
-                <li class="sideBarDropdownClick"><a href="#">학사행정</a>
-                    <ul class="subToggle">
-                        <li><a href="#">휴학 및 자퇴신청</a></li> 
+            <div class="sideBarBackground">
+
+                <div class="sideBarTopBackground">
+                    <div class="sideBarTopContainer">
+                        <img src="/RESOURCES/IMAGE/logo/005.png" alt="sideBarTopImage">
+                        <p>통합정보시스템</p>
+                    </div>
+                </div>
+
+                <div class="sideBarDropdown">
+
+                    <ul class="sideBarDropdownToggle">
+                        <li class="sideBarDropdownClick"><a href="#">마이페이지</a>
+                            <ul class="subToggle"> 
+                                <li><a href="#">개인정보수정</a></li>
+                                <li><a href="#">시간표조회</a></li>
+                                <li><a href="#">수강신청조회</a></li>
+                            </ul>
+                        </li>
+                    
+                        <li class="sideBarDropdownClick"><a href="#">학사행정</a>
+                            <ul class="subToggle">
+                                <li><a href="#">휴학 및 자퇴신청</a></li> 
+                            </ul>
+                        </li>
+
+                        <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
+                        <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
+                        <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
+
+                        <li class="sideBarDropdownClick"><a href="#">브레드에바란다</a>
+                            <ul class="subToggle">
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">불편/건의사항</a></li> 
+                            </ul>
+                        </li>
+
+                        <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
+
+                        <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
                     </ul>
-                </li>
-                
-                <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
-                <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
-                <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
+                </div> <!-- sideBarDropdownToggle -->
 
-                <li class="sideBarDropdownClick"><a href="#">브레드에바란다</a>
-                    <ul class="subToggle">
-                        <li><a href="#">Q&A</a></li>
-                        <li><a href="#">불편/건의사항</a></li> 
-                    </ul>
-                </li>
+            </div> <!-- sideBarBackground -->
 
-                <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
-
-                <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
-            </ul>
-
-        </div> <!-- sideBarDropdownToggle -->
-
-    </div> <!-- sideBarBackground -->
-
-</div> <!-- mainContainer -->
+    </div> <!-- mainContainer -->
 
 </body>
 
@@ -235,7 +282,5 @@
             </div>
         </div> 
     </footer>
-
-
 
 </html>
