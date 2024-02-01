@@ -8,6 +8,7 @@
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadWish/breadWishQ&A/breadWishQ&APageAdmin.css">
+    <!--  -->
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadHeader.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadFooter.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
@@ -16,6 +17,7 @@
     <!-- 변경해야할 JS 링크 -->
     <script src="/RESOURCES/JS/sideBar.js"></script>
     <script src="/RESOURCES/JS/menuChoice.js"></script>
+    <script src="/RESOURCES/JS/comment.js"></script>
     
     <title>breadWishQ&APageAdmin</title>
 </head>
@@ -91,19 +93,17 @@
 
                     <div class="commentContainer">
                         <div class="comment">
-                            <div class="commentText">
+                            <div class="commentTitle">
                                 <span>답변</span>
-                                <p>비둘기 털 날리지 않나요? 안 됩니다.</p>
-                                <button>수정</button>
-                                <button>삭제</button>
                             </div>
-
+                            <div class="commentText"></div>
                                 <br>
 
+                        </div> <!-- comment -->
                             <input type="text">
-                            <button>등록</button>
-                        </div>
-                    </div>
+                            <button onclick="submitComment()">등록</button>
+
+                     </div> <!-- commentContainer -->
 
                     <br><br><br>
 
@@ -139,7 +139,7 @@
         
                 <li class="sideBarDropdownClick"><a href="#">학사행정</a>
                     <ul class="subToggle">
-                        <li><a href="#">휴학 및 자퇴신청</a></li> 
+                        <li><a href="#">휴학/자퇴신청</a></li> 
                     </ul>
                 </li>
                 

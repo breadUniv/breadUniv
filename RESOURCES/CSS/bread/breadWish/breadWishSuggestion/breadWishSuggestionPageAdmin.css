@@ -190,7 +190,7 @@ article {
 }
 
 .commentContainer > input {
-    margin-left: 245px;
+    margin-left: 250px;
     width: 500px;
     margin-right: 3px;
 }
@@ -236,7 +236,7 @@ article {
 }
 
 .commentNewInput {
-    margin-left: 125px;
+    /* margin-left: 125px; */
     width: 500px;
     margin-right: 3px;
 }
