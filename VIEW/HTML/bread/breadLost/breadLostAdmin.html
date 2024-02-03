@@ -7,19 +7,18 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadWish/breadWishQ&A/breadWishQ&APage.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadLost/breadLostAdmin.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadHeader.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadFooter.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSaveButton.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/comment.css">
     <!-- 변경해야할 JS 링크 -->
-    <script src="/RESOURCES/JS/sideBar.js"></script>
     <script src="/RESOURCES/JS/menuChoice.js"></script>
-    
-    
-    <title>breadWishQ&APage</title>
+    <script src="/RESOURCES/JS/sideBar.js"></script>
+    <script src="/RESOURCES/JS/checkBox.js"></script>
+
+    <title>breadLostAdmin</title>
 </head>
 <body>
     <div class="mainContainer">
@@ -47,64 +46,124 @@
 
                 <div class="section01Container">
                     <div class="titleText">
-                        <p>브레드에바란다 > Q&A</p>
+                        <p>분실물</p>
                     </div>
 
                     <br><br><br><br><br>
 
+                    <div class="titleContainer">
+                        <div class="searchContainer">
+                            <label for="search">검색</label>
+                            <input type="text">
+                        </div>
+    
+                        <div class="dropdown">
+                            <label for="sorting">정렬조건</label>
+                            <select>
+                                <option value="list">없음</option>
+                                <option value="list">글번호 오름차순</option>
+                                <option value="list">글번호 내림차순</option>
+                            </select>
+                        </div>
+    
                         <div class="manageButton">
                             <div class="adminButton">
+                                <select name="adminSelect" id="adminSelect">
+                                    <option value="adminOption">선택</option>
+                                    <option value="adminOption">게시글숨기기</option>
+                                    <option value="adminOption">사용자경고</option>
+                                </select>
+                                <button>관리</button>
                                 <button>삭제</button>
                             </div>
                         </div>
 
-                    <br><br><br><br><br>
+                    </div> <!-- titleContainer -->
+
+                    <br><br><br><br><br><br>
 
                     <div class="boardContainer">
                         <div class="boarderTitle">
-                            <span>제목</span>
-                            <span class="title">[학교생활] 세계로 뻗어나가는 빵 쪼아먹기 강의</span>
+                            <input type="checkbox" id="boarderTitleCheckbox">
+                            <span>글번호</span>
+                            <span class="title">제목</span>
+                            <span>작성자</span>
+                            <span>조회수</span>
+                            <span>작성일</span>
+                        </div>
+                            <br>
+                            <hr>
+                            <br>    
+                        <div class="board">
+                            <input type="checkbox" class="boardCheckbox">
+                            <span>1</span>
+                            <span class="title">밀가루관에 밀가루 흘리신분</span>
+                            <span>하경진</span>
+                            <span>2213</span>
+                            <span>2024-01-25</span>
+                        </div>
+    
+                        <br><hr><br>
+    
+                        <div class="board">
+                            <input type="checkbox" class="boardCheckbox">
+                            <span>2</span>
+                            <span class="title">쿠키동 계단에 초코칩</span>
+                            <span>김민하</span>
+                            <span>2321</span>
                             <span>2024-01-30</span>
                         </div>
-                        <br><br>
-                        <hr>
-                        <br><br><br>
-                        <div class="board">
-                            <span>내용</span>
-                            <p>
-                                글로벌한 빵 쪼아먹기 기술 강의 2024년 01월 31일 설탕동에서 14시 30분 강의한다는데<br>
-                                비둘기 친구랑 같이 들어도 되나요?
-                            </p>
-                        </div>
-                        
-                    </div> <!-- boardContainer -->
-                    
-                    <br><br><br>
-
-                    <hr>
-
-                    <br><br><br>
-
-                    <div class="commentContainer01">
-                        <div class="comment01">
-                            <div class="commentText01">
-                                <span>답변</span>
-                                <p>비둘기 털 날리지 않나요? 안 됩니다.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br><br><br>
-
-                    <div class="saveButton">
-                        <button>이전으로</button>
-                    </div>
     
-                </div> <!-- section01Container -->
+                        <br><hr><br>
+                        
+                        <div class="board">
+                            <input type="checkbox" class="boardCheckbox">
+                            <span>3</span>
+                            <span class="title">크림홀에서 빵쪼아먹기용 부리 흘리신분</span>
+                            <span>김민하</span>
+                            <span>2390</span>
+                            <span>2024-01-30</span>
+                        </div>
+    
+                        <br><hr><br>
+                        
+                        <div class="board">
+                            <input type="checkbox" class="boardCheckbox">
+                            <span>4</span>
+                            <span class="title">딸기잼 발라진 식빵 떨구신분</span>
+                            <span>김민하</span>
+                            <span>2390</span>
+                            <span>2024-01-30</span>
+                        </div>
+    
+                        <br><hr><br>
+                        
+                        <div class="board">
+                            <input type="checkbox" class="boardCheckbox">
+                            <span>5</span>
+                            <span class="title">버터관 내리막길에서 굴러온 쿠키 주인 찾습니다</span>
+                            <span>하경진</span>
+                            <span>2390</span>
+                            <span>2024-01-30</span>
+                        </div>
+    
+                    </div> <!-- boardContainer -->
 
-            </div> <!-- section01 -->
+                <br><br><br><br><br><br>
 
-    </article> 
+                <div class="pagination">
+                    <button class="buttonArrow"><<</button>&nbsp;
+                    <button class="buttonPage">1&nbsp;</button>
+                    <button class="buttonPage">2&nbsp;</button>
+                    <button class="buttonPage">3</button>&nbsp;
+                    <button class="buttonArrow">>></button>
+                </div>
+
+            </div> <!-- section01Container -->
+            
+        </div> <!-- section01 -->
+        
+        </article>
   
     <div class="sideBarBackground">
 

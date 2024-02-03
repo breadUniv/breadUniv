@@ -142,17 +142,13 @@ article {
 
 .boarderTitle {
     width: 1200px;
-    padding-left: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.boarderTitle > span.title {
-    width: 800px;
-}
-
 .boarderTitle span {
-    width: 100px;
+    width: 200px;
+    text-align: center;
 }
 
 .boardContainer hr {
@@ -163,12 +159,19 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    margin-left: 100px;
 }
 
-.board > p {
-    width: 800px;
-    margin-left: 125px;
+.board span {
+    width: 200px;
+    text-align: center;
+}
+
+.board > input {
+    width: 17px;
+}
+
+.boarderTitle > input {
+    width: 17px;
 }
 
 .pagination {
@@ -191,8 +194,10 @@ article {
     color:#6c6c6c;
 }
 
-.listButton > button {
-    display: flex;
-    margin-left:auto;
-    margin-right: 500px;
+.board > span.title {
+    width: 400px;
+}
+
+.boarderTitle > span.title {
+    width: 400px;
 }

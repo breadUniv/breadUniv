@@ -7,16 +7,19 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadMypage/breadTimeTable.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadLost/breadLostPage.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadHeader.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadFooter.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSaveButton.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/comment.css">
     <!-- 변경해야할 JS 링크 -->
-    <script src="/RESOURCES/JS/menuChoice.js"></script>
     <script src="/RESOURCES/JS/sideBar.js"></script>
-
-    <title>breadTimeTable</title>
+    <script src="/RESOURCES/JS/menuChoice.js"></script>
+    <script src="/RESOURCES/JS/comment.js"></script>
+    
+    <title>breadLostPage</title>
 </head>
 <body>
     <div class="mainContainer">
@@ -44,27 +47,75 @@
 
                 <div class="section01Container">
                     <div class="titleText">
-                        <p>마이페이지</p>
+                        <p>분실물</p>
                     </div>
 
-                    <br><br><br>
-                    <div class="titleMenu">
-                        <span>개인정보수정</span>
-                        <span>시간표조회</span>
-                        <span>수강신청조회</span>
+                    <br><br><br><br><br>
+
+                        <div class="manageButton">
+                            <div class="adminButton">
+                                <button>수정</button>
+                                <button>삭제</button>
+                            </div>
+                        </div>
+
+                    <br><br><br><br><br>
+
+                    <div class="boardContainer">
+                        <div class="boarderTitle">
+                            <span>제목</span>
+                            <span class="title">[공지사항] 크림홀에서 빵쪼아먹기 전공책 판매합니다.</span>
+                            <span>하경진</span>
+                            <span>2024-01-30</span>
+                        </div>
                         <br><br>
                         <hr>
-                        <br>
-                    </div> <!-- titleMenu -->
+                        <br><br><br>
+                        <div class="board">
+                            <div class="boardTitle">
+                                <span>내용</span>
+                            </div>
+                            <div class="boardText">
+                                <img src="/RESOURCES/IMAGE/login/학교 메인 배경.jpg" alt="">
+                                <p>
+                                    야무지게 쪼아먹을 학우분들<br>
+                                    꼭 구매하시길 바랍니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div> <!-- boardContainer -->
+                    
+                    <br><br><br>
 
-                <br><br> 
+                    <hr>
 
-                <div class="timeTable">
-                    <img src="/RESOURCES/IMAGE/etc/timeTable.png" alt="timeTable">
-                </div>
+                    <br><br><br>
+
+                    <div class="commentContainer">
+                        <div class="comment">
+                            <div class="commentTitle">
+                                <span>답변</span>
+                            </div>
+                            <div class="commentText"></div>
+                                <br>
+
+                        </div> <!-- comment -->
+                            <input type="text">
+                            <button onclick="submitComment()">등록</button>
+
+                     </div> <!-- commentContainer -->
+                    <br><br><br>
+
+                    <div class="saveButton">
+                        <button>이전으로</button>
+                    </div>
+    
+                </div> <!-- section01Container -->
 
             </div> <!-- section01 -->
-        </article>
+
+    </article> 
   
     <div class="sideBarBackground">
 
@@ -106,7 +157,6 @@
                 <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
 
                 <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
-
             </ul>
 
         </div> <!-- sideBarDropdownToggle -->

@@ -149,6 +149,7 @@ article {
 
 .boarderTitle > span.title {
     width: 800px;
+    margin-left: 50px;
 }
 
 .boarderTitle span {
@@ -195,4 +196,15 @@ article {
     display: flex;
     margin-left:auto;
     margin-right: 500px;
+}
+
+.boardText > img {
+    margin-left: 125px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: auto;
+}
+
+.boardText > p {
+    margin-left: 125px;
 }
