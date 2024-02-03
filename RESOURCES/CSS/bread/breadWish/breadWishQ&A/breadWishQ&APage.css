@@ -153,6 +153,7 @@ article {
 
 .boarderTitle span {
     width: 100px;
+    margin-right: 70px;
 }
 
 .boardContainer hr {
@@ -260,4 +261,15 @@ article {
     display: flex;
     margin-left:auto;
     margin-right: 500px;
+}
+
+.boardText > img {
+    margin-left: 125px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: auto;
+}
+
+.boardText > p {
+    margin-left: 125px;
 }

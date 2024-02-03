@@ -131,6 +131,24 @@ article {
     color: #000;
 }
 
+.saveButton {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.saveButton:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -142,17 +160,13 @@ article {
 
 .boarderTitle {
     width: 1200px;
-    padding-left: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.boarderTitle > span.title {
-    width: 800px;
-}
-
 .boarderTitle span {
-    width: 100px;
+    width: 200px;
+    text-align: center;
 }
 
 .boardContainer hr {
@@ -163,12 +177,19 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    margin-left: 100px;
 }
 
-.board > p {
-    width: 800px;
-    margin-left: 125px;
+.board span {
+    width: 200px;
+    text-align: center;
+}
+
+.board > input {
+    width: 17px;
+}
+
+.boarderTitle > input {
+    width: 17px;
 }
 
 .pagination {
@@ -191,8 +212,10 @@ article {
     color:#6c6c6c;
 }
 
-.listButton > button {
-    display: flex;
-    margin-left:auto;
-    margin-right: 500px;
+.board > span.title {
+    width: 400px;
+}
+
+.boarderTitle > span.title {
+    width: 400px;
 }

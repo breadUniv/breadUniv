@@ -131,6 +131,27 @@ article {
     color: #000;
 }
 
+.saveButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saveButton > button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color:#456E2A;
+    color:#fff;
+    font-size: 12px;
+    font-weight: medium;
+}
+
+.saveButton:hover {
+    background-color:#DAE2D4;
+    color: #000;
+}
+
 .boardContainer > * {
     font-size: 14px;
     color: #6c6c6c;
@@ -150,10 +171,11 @@ article {
 .boarderTitle > label {
     display: flex;
     align-items: center;
+    margin-right: 80px;
 }
 
 .boarderTitle > input {
-    width: 800px;
+    width: 700px;
     height: 30px;
     outline: none;
 }
@@ -178,11 +200,11 @@ article {
 }
 
 .board > label {
-    margin-right: 80px;
+    margin-right: 105px;
 }
 
 .board > textarea {
-    width: 800px;
+    width: 700px;
     outline: none;
     resize: none;
     padding: 30px;

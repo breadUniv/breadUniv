@@ -1,4 +1,6 @@
-// 수정 삭제
+
+
+// 관리 삭제
 function applyEdit(editInput, commentText) {
     var editedText = editInput.value;
     commentText.textContent = editedText;
