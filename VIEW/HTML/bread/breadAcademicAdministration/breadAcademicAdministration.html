@@ -43,21 +43,14 @@
                 </div> <!-- headerBackground -->
             </div> <!-- header -->
 
+        <div class="sectionHead">  
+
             <div class="section01">
 
                 <div class="section01Container">
                     <div class="titleText">
-                        <p>학사행정</p>           
-                    </div>
-
-                    <br><br><br>
-
-                    <div class="titleMenu">
-                        <span>휴학/자퇴신청</span>
-                        <br><br>
-                        <hr>
-                        <br>
-                    </div> <!-- titleMenu -->
+                        <p>학사행정 > 휴학/자퇴신청</p>           
+                    </div> 
 
                     <br><br><br><br><br>
 
@@ -87,9 +80,9 @@
                                 <tr>
                                     <th scope="row">신청구분</th>
                                     <td class="td_label">
-                                        <label><input type="radio" name="application_type" value="0">일반휴학</label>
-                                        <label><input type="radio" name="application_type" value="1">군휴학</label>
-                                        <label><input type="radio" name="application_type" value="2">자퇴</label>
+                                        <label><input type="radio" name="application_type" value="일반휴학">일반휴학</label>
+                                        <label><input type="radio" name="application_type" value="군휴학">군휴학</label>
+                                        <label><input type="radio" name="application_type" value="자퇴">자퇴</label>
                                     </td>
                                     <th>강의명</th>
                                     <td>
@@ -134,18 +127,16 @@
                                 <tr>
                                     <th scope="row">사유</th>
                                     <td class="td_label" colspan="3">
-                                        <textarea name="reason" class="frm_input" style="width: 820px; height: 200px;" cols="50" rows="20" resize="none;"></textarea>
+                                        <textarea name="reason" class="frm_input" style="width: 845px; height: 200px;" cols="50" rows="20" resize="none;"></textarea>
                                         <!-- <inpud type="text" name="reason" class="frm_input w80" style="width: 820px; height: 200px;">  -->
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-
                         <br><br><br><br>
-                        
                         <div class="manageButton">
                             <div class="adminButton">
-                                <button>신청</button>
+                                <button id="acButton" type="submit">신청</button>
                             </div>
                         </div>
                         
@@ -160,46 +151,17 @@
                         <p>휴학 및 자퇴 신청현황</p>           
                     </div>
                     <br><br>
-                    <!-- <div class="boardContainer">
-                        <div class="boarderTitle">
-                            <span>NO</span>
-                            <span>신청일자</span>
-                            <span>학년도</span>
-                            <span>학기</span>
-                            <span>신청구분</span>
-                            <span>학과</span>
-                            <span>접수여부</span>
-                            <span>취소일자</span>
-                        </div>
-                        <br>
-                        <hr>
-                        <br>    
-                        <div class="board">
-                            <span>1</span>
-                            <span>2024-01-31</span>
-                            <span>2024</span>
-                            <span>1</span>
-                            <span>자퇴</span>
-                            <span>시각정보디자인</span>
-                            <span>신청</span>
-                            <span>2024-01-31</span>
-                            <span class="action">
-                                버튼을 동적으로 추가하기 위해 id 속성을 추가했습니다 -->
-                                <!-- <button id="cancelButton">취소하기</button>-->
-                        <!-- </div> -->
-
                         <div class="tbl_head01">
                             <table>
                                 <colgroup>
-                                    <col class="w20">
+                                    <col class="w10">
+                                    <col class="w80">
+                                    <col class="w10">
+                                    <col class="w10">
+                                    <col class="w10">
+                                    <col class="w50">
                                     <col class="w80">
                                     <col class="w50">
-                                    <col class="w50">
-                                    <col class="w50">
-                                    <col class="w50">
-                                    <col class="w100">
-                                    <col class="w50">
-                                    <col class="w80">
                                 </colgroup>
                                 <thead>
                                 <tr>
@@ -207,19 +169,19 @@
                                     <th scope="col">신청일자</th>
                                     <th scope="col">학년도</th>
                                     <th scope="col">학기</th>
-                                    <th scope="col"><a href=""></a>신청구분</th>
+                                    <th scope="col">신청구분</th>
                                     <th scope="col">학과</th>
                                     <th scope="col">접수여부</th>
                                     <th scope="col">취소일자</th>
                                 </tr>
                                 </thead>
-                                <tbody><tr><td colspan="9" class="empty_table">자료가 없습니다.</td></tr></tbody>
+                                <tbody><tr><td colspan="8" class="empty_table">자료가 없습니다.</td></tr></tbody>
                             </table>
                         </div> <!-- tbl_head01 -->
-
-                    <!-- </div> boardContainer -->
                 </div> <!-- section02Container-->
             </div> <!-- section02-->
+
+        </div>  <!-- sectionHead -->
 
         </article>
         
@@ -242,7 +204,6 @@
                                 <li><a href="#">수강신청조회</a></li>
                             </ul>
                         </li>
-                    
                         <li class="sideBarDropdownClick"><a href="#">학사행정</a>
                             <ul class="subToggle">
                                 <li><a href="#">휴학 및 자퇴신청</a></li> 
@@ -252,16 +213,14 @@
                         <li class="sideBarDropdownClick"><a href="#">강의조회</a></li>
                         <li class="sideBarDropdownClick"><a href="#">수강신청</a></li>
                         <li class="sideBarDropdownClick"><a href="#">성적관리</a></li>
-
                         <li class="sideBarDropdownClick"><a href="#">브레드에바란다</a>
                             <ul class="subToggle">
                                 <li><a href="#">Q&A</a></li>
-                                <li><a href="#">불편/건의사항</a></li> 
+                                <li><a href="#">불편/건의사항</a></li>           
                             </ul>
                         </li>
 
                         <li class="sideBarDropdownClick"><a href="#">공지사항</a></li>
-
                         <li class="sideBarDropdownClick"><a href="#">분실물</a></li>
                     </ul>
                 </div> <!-- sideBarDropdownToggle -->

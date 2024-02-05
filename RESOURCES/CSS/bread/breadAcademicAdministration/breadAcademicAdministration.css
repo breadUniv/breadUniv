@@ -3,8 +3,15 @@ body, p, h1, h2, ul, table, input, th, td, thead, input, select {
     padding: 0px;
 }
 
+.sectionHead{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+
 .w300 {  /* input들 칸 */
-    width: 320px !important;
+    width: 330px !important;
 }
 .tbl_frm01 {
     margin-top: -60px;
@@ -14,9 +21,10 @@ body, p, h1, h2, ul, table, input, th, td, thead, input, select {
     padding: 8px 10px;
     height: 48px;
     border-bottom: 1px solid #e4e5e7;
-    
-    /* text-align: left; */
-    /* vertical-align: middle; */
+}
+
+table{
+    border-top: 1px solid #e4e5e7;
 }
 
 .frm_input { /* 입력받는 란*/
@@ -30,7 +38,6 @@ body, p, h1, h2, ul, table, input, th, td, thead, input, select {
     height: 30px;
 }
 
-
 input{
     width: 20px;
     height: 15px;
@@ -38,11 +45,9 @@ input{
 }
 
 label{ /* 신청구분, 휴학사유 목록 글씨*/
-    /* margin-right: 20px; */
-    font-size: 15px;
+    font-size: 14px;
 }
 label input[type="radio"] {
-    /* display: flex; */
     vertical-align: middle; /* 체크란과 글씨 정렬*/
     margin-right: 5px; /* 라디오 버튼과 텍스트 사이의 간격을 늘리기 위해 margin-right 사용 */
 }
@@ -55,7 +60,7 @@ textarea{
     margin-right: 10px;
 } 
 
-table th {
+.tbl_frm01 th {
     width: 150px;
     background-color: #f8f8f8;
     white-space: nowrap; /*줄바꿈방지*/
@@ -66,13 +71,11 @@ table th {
 table, th, td{
     /* font-weight: normal; 텍스트 두깨 */
     color: #454545;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 select option{ /* 드롭다운 메뉴와 글자 간격 정렬 */
     vertical-align: middle;
-    /* border-radius: 0 !important; 이전에 정의된 스타일을 덮어쓰기 위해 !important 사용
-    -webkit-border-radius: 0 !important; 웹킷 브라우저에서도 적용되도록 함 */
 }
 
 select {
@@ -98,40 +101,17 @@ select {
 }
 
 .section01Container {
-    width: 1200px;
-    height: 800px;
+    width: 1100px;
+    height: 770px;
 }
 
-/* .titleMenu span {
-    font-size: 15px;
-    cursor: pointer;
-    color: #b9b9b9;
-    margin-right: 25px;
-} */
-
-/* .titleMenu span:hover {
-    color:#456E2A;
-    font-weight: bolder;
-} */
-
-/* .titleMenu span.active {
-    color:#456E2A;
-    font-weight: bolder;
-} */
-
-/* .titleMenu hr {
-    border: 0.1px solid #d9d9d9;
-    width: 800px;
-} */
-
 .section02 {
-    margin: 50px 0px 200px 0px;
+    margin: 0px 0px 200px -50px;
     display: flex;
-    justify-content: center;
 }
 
 .section02Container {
-    width: 1200px;
+    width: 1050px;
 }
 
 .titleText2 p{
@@ -140,62 +120,10 @@ select {
     color:#456E2A;
 }
 
-/* .boardContainer > * {
-    font-size: 14px;
-    color: #6c6c6c;
-}
-
-.boardContainer hr {
-    border: 0.1px solid #d9d9d9;
-    width: 1200px;
-} */
-
-/* .boarderTitle {
-    
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: -110px;
-    padding-left: 110px;
-}
-
-.boarderTitle span {
-    width: 200px;
-    text-align: center;
-}
-
-
-.board {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 0px;
-}
-
-.board span {
-    width: 250px;
-    text-align: center;
-} */
-/* 
-.board button {
-    width: 100px;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color:#d9d9d9;
-    font-size: 12px;
-    font-weight: medium;
-    cursor: pointer;
-} */
-
-/* .board button:hover {
-    background-color: #456E2A;
-    color: #fff;
-} */
 
 .manageButton{
     margin-top: -60px;
-    margin-right: 215px;
+    margin-right: 90px;
 }
 
 
@@ -204,7 +132,7 @@ select {
 }
 
 .tbl_head01 {
-    border-top:1px solid #aeaeae;
+    /* border-top:1px solid #aeaeae; */
     border-bottom:1px solid #e4e5e7;
 }
 
@@ -212,19 +140,16 @@ select {
     width:100%;
 }
 
-.tbl_head01 thead th {
-    border-top:0 !important;
-}
 
 .tbl_head01 th {
-    padding:8px 15px;
+    padding:8px 10px;
     line-height:1em;
     font-weight:600;
     background:#f1f1f1;
 }
 
 .tbl_head01 th, .tbl_head01 td {
-    border-left: 1px solid #e4e5e7;
+    /* border-left: 1px solid #e4e5e7; */
     text-align: center;
     vertical-align: middle;
 }
@@ -233,4 +158,14 @@ select {
     color: #999;
     padding: 50px 0 !important;
     text-align: center;
+}
+
+.cancelButton{
+    color: #000000;
+    
+}
+
+.tbl_head01 tbody tr td {
+    height: 30px; /* 원하는 높이로 수정하세요 */
+    border-top:1px solid #e4e5e7;
 }
