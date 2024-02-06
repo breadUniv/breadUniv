@@ -132,11 +132,6 @@ article {
 }
 
 .saveButton {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.saveButton > button {
     width: 80px;
     height: 25px;
     border: none;
@@ -145,6 +140,8 @@ article {
     color:#fff;
     font-size: 12px;
     font-weight: medium;
+    margin-left: 50%;
+    cursor: pointer;
 }
 
 .saveButton:hover {
@@ -163,29 +160,13 @@ article {
 
 .boarderTitle {
     width: 1200px;
-    padding-left: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.boarderTitle > label {
-    display: flex;
-    align-items: center;
-    margin-right: 80px;
-}
-
-.boarderTitle > input {
-    width: 700px;
-    height: 30px;
-    outline: none;
-}
-
-.boarderTitle > span.title {
-    width: 800px;
-}
-
 .boarderTitle span {
-    width: 100px;
+    width: 200px;
+    text-align: center;
 }
 
 .boardContainer hr {
@@ -196,21 +177,19 @@ article {
 .board {
     width: 1200px;
     display: flex;
-    margin-left: 100px;
 }
 
-.board > label {
-    margin-right: 105px;
+.board span {
+    width: 200px;
+    text-align: center;
 }
 
-.board > textarea {
-    width: 700px;
-    outline: none;
-    resize: none;
-    padding: 30px;
-    border-radius: 5px;
-    border: 0.5px solid #b9b9b9;
-    outline: none;
+.board > input {
+    width: 17px;
+}
+
+.boarderTitle > input {
+    width: 17px;
 }
 
 .pagination {
@@ -233,32 +212,52 @@ article {
     color:#6c6c6c;
 }
 
-.listButton > button {
+.board > span.title {
+    width: 400px;
+}
+
+.boarderTitle > span.title {
+    width: 400px;
+}
+
+#radioContainer {
     display: flex;
-    margin-left:auto;
-    margin-right: 500px;
+    justify-content: center;
+    width: 280px;
+}
+  
+#radioContainer > input {
+    width: 18px;
 }
 
-.img {
-    margin-left: 225px;
+#radioContainer > label > input {
+    width: 13px;
+    margin-right: 5px;
 }
 
-.img img {
-    width: 80px;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-.imgUploadButtonBox {
-    display: flex;
-    margin-left: 225px;
-}
-
-.imgUploadButtonBox > button {
-    margin-right: 30px;
-}
-
-.imgUploadButtonBox > p {
+#radioContainer > label {
+    width: 100px;
     display: flex;
     align-items: center;
+    margin-right: -40px;
+}
+
+.boarderTitle > .state {
+    width: 420px;
+}
+
+#radioContainer p {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+#attendanceForm {
+    display: flex;
+}
+
+#attendanceRate {
+    width: 50px;
+    margin-right: 35px;
 }

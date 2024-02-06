@@ -80,8 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
     function submitComment() {
         var inputText = document.querySelector('.commentContainer input[type="text"]').value;
         if (inputText.trim() === '') {
@@ -103,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('등록 수정버튼');
             console.log(event.target);
             editComment(this);
-
         }
     };
     
