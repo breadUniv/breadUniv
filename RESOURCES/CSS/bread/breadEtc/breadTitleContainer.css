@@ -66,6 +66,8 @@ select#adminSelect {
     font-size: 12px;
     font-weight: medium;
     cursor: pointer;
+    margin-left: -17px;
+    margin-right: 20px;
     }
     
 .dropdownButton button:hover {

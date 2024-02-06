@@ -30,10 +30,6 @@ article {
     color:#456E2A;
 }
 
-.section01Container {
-    width: 1200px;
-}
-
 .titleMenu span {
     font-size: 15px;
     cursor: pointer;
@@ -132,11 +128,6 @@ article {
 }
 
 .saveButton {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.saveButton > button {
     width: 80px;
     height: 25px;
     border: none;
@@ -145,6 +136,8 @@ article {
     color:#fff;
     font-size: 12px;
     font-weight: medium;
+    margin-left: 50%;
+    cursor: pointer;
 }
 
 .saveButton:hover {
@@ -152,113 +145,19 @@ article {
     color: #000;
 }
 
-.boardContainer > * {
-    font-size: 14px;
-    color: #6c6c6c;
+.categoryToggle {
+    position: relative;
+    display: inline-block;
 }
 
-.borderContainer {
-    align-items: center;
+.categoryToggle ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
 }
 
-.boarderTitle {
-    width: 1200px;
-    padding-left: 100px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.boarderTitle > label {
-    display: flex;
-    align-items: center;
-    margin-right: 80px;
-}
-
-.boarderTitle > input {
-    width: 700px;
-    height: 30px;
-    outline: none;
-}
-
-.boarderTitle > span.title {
-    width: 800px;
-}
-
-.boarderTitle span {
-    width: 100px;
-}
-
-.boardContainer hr {
-    border: 0.1px solid #d9d9d9;
-    width: 1200px;
-}
-
-.board {
-    width: 1200px;
-    display: flex;
-    margin-left: 100px;
-}
-
-.board > label {
-    margin-right: 105px;
-}
-
-.board > textarea {
-    width: 700px;
-    outline: none;
-    resize: none;
-    padding: 30px;
-    border-radius: 5px;
-    border: 0.5px solid #b9b9b9;
-    outline: none;
-}
-
-.pagination {
-    text-align: center;
-}
-
-.buttonPage {
-    font-size: 14px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color:#6c6c6c;
-}
-
-.buttonArrow {
-    font-size: 14px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color:#6c6c6c;
-}
-
-.listButton > button {
-    display: flex;
-    margin-left:auto;
-    margin-right: 500px;
-}
-
-.img {
-    margin-left: 225px;
-}
-
-.img img {
-    width: 80px;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-
-.imgUploadButtonBox {
-    display: flex;
-    margin-left: 225px;
-}
-
-.imgUploadButtonBox > button {
-    margin-right: 30px;
-}
-
-.imgUploadButtonBox > p {
-    display: flex;
-    align-items: center;
+.categoryToggle ul li {
+    display: block;
 }
