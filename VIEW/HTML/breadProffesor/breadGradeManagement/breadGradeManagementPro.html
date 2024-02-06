@@ -7,18 +7,17 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- 변경해야할 CSS 링크 -->
     <link rel="stylesheet" href="/RESOURCES/CSS/background/background.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadWish/breadWishSuggestion/breadWishSuggestion.css">
+    <link rel="stylesheet" href="/RESOURCES/CSS/breadProffesor/breadGradeManagementPro/breadGradeManagementPro.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadHeader.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadfooter.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSideBar.css">
     <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadTitleContainer.css">
-    <link rel="stylesheet" href="/RESOURCES/CSS/bread/breadEtc/breadSaveButton.css">
     <!-- 변경해야할 JS 링크 -->
     <script src="/RESOURCES/JS/menuChoice.js"></script>
     <script src="/RESOURCES/JS/sideBar.js"></script>
     <script src="/RESOURCES/JS/checkBox.js"></script>
 
-    <title>breadWishSuggestion</title>
+    <title>breadGradeManagementPro</title>
 </head>
 <body>
     <div class="mainContainer">
@@ -46,17 +45,8 @@
 
                 <div class="section01Container">
                     <div class="titleText">
-                        <p>브레드에바란다</p>
+                        <p>성적관리</p>
                     </div>
-
-                    <br><br><br>
-                    <div class="titleMenu">
-                        <span>Q&A</span>
-                        <span>불편/건의사항</span>
-                        <br><br>
-                        <hr>
-                        <br>
-                    </div> <!-- titleMenu -->
 
                     <br><br><br><br><br>
 
@@ -68,22 +58,11 @@
                             </div>
                         
                             <div class="dropdown">
-                                <label for="category">카테고리</label>
-                                <select>
-                                    <option value="list">전체</option>
-                                    <option value="list">학교생활</option>
-                                    <option value="list">기숙사</option>
-                                    <option value="list">등록금</option>
-                                    <option value="list">기타</option>
-                                </select>
-                            </div>
-                        
-                            <div class="dropdown">
                                 <label for="sorting">정렬조건</label>
                                 <select>
                                     <option value="list">선택</option>
-                                    <option value="list">글번호 오름차순</option>
-                                    <option value="list">글번호 내림차순</option>
+                                    <option value="list">이름별 오름차순</option>
+                                    <option value="list">이름별 내림차순</option>
                                 </select>
                             </div>
 
@@ -92,11 +71,9 @@
                             </div>
                         </div>
 
-    
                         <div class="manageButton">
                             <div class="adminButton">
-                                <button>글작성</button>
-                                <button>삭제</button>
+                                <button>등록</button>
                             </div>
                         </div>
 
@@ -107,72 +84,142 @@
                 <div class="boardContainer">
                     <div class="boarderTitle">
                         <input type="checkbox" id="boarderTitleCheckbox">
-                        <span>글번호</span>
-                        <span class="title">제목</span>
-                        <span>작성자</span>
-                        <span>처리상태</span>
-                        <span>조회수</span>
-                        <span>작성일</span>
+                        <span>학번</span>
+                        <span>이름</span>
+                        <span>강의명</span>
+                        <span>학과</span>
+                        <span>출석률</span>
+                        <span>성적</span>
                     </div>
                         <br>
                         <hr>
                         <br>    
                     <div class="board">
                         <input type="checkbox" class="boardCheckbox">
-                        <span>1</span>
-                        <span class="title">[학교생활] 버터동 언덕에 버터발려있어요</span>
+                        <span>20240001</span>
                         <span>하경진</span>
-                        <span>답변완료</span>
-                        <span>2213</span>
-                        <span>2024-01-25</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>100%</span>
+                        <select name="grade" id="grade">
+                            <option value="gradeOption">A+</option>
+                            <option value="gradeOption">A0</option>
+                            <option value="gradeOption">A-</option>
+                            <option value="gradeOption">B+</option>
+                            <option value="gradeOption">B0</option>
+                            <option value="gradeOption">B-</option>
+                            <option value="gradeOption">C+</option>
+                            <option value="gradeOption">C0</option>
+                            <option value="gradeOption">C-</option>
+                            <option value="gradeOption">D+</option>
+                            <option value="gradeOption">D0</option>
+                            <option value="gradeOption">D-</option>
+                            <option value="gradeOption">F</option>
+                        </select>
                     </div>
 
                     <br><hr><br>
 
                     <div class="board">
                         <input type="checkbox" class="boardCheckbox">
-                        <span>2</span>
-                        <span class="title">[학교생활] 해외로 뻗어나가는 빵 쪼아먹기 기술 강의</span>
-                        <span>김민하</span>
-                        <span>미답변</span>
-                        <span>2321</span>
-                        <span>2024-01-30</span>
-                    </div>
-
-                    <br><hr><br>
-                    
-                    <div class="board">
-                        <input type="checkbox" class="boardCheckbox">
-                        <span>3</span>
-                        <span class="title">[기숙사] 기숙사에 쿠키가루가 너무 많이 떨어져있어요</span>
-                        <span>김민하</span>
-                        <span>답변완료</span>
-                        <span>2390</span>
-                        <span>2024-01-30</span>
-                    </div>
-
-                    <br><hr><br>
-                    
-                    <div class="board">
-                        <input type="checkbox" class="boardCheckbox">
-                        <span>4</span>
-                        <span class="title">[등록금] 등록금 쿠키로 내도 되나요?</span>
-                        <span>김민하</span>
-                        <span>답변완료</span>
-                        <span>2390</span>
-                        <span>2024-01-30</span>
-                    </div>
-
-                    <br><hr><br>
-                    
-                    <div class="board">
-                        <input type="checkbox" class="boardCheckbox">
-                        <span>5</span>
-                        <span class="title">[기타] 빵에 버터 많이넣어주세요</span>
+                        <span>20240001</span>
                         <span>하경진</span>
-                        <span>미답변</span>
-                        <span>2390</span>
-                        <span>2024-01-30</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>100%</span>
+                        <select name="grade" id="grade">
+                            <option value="gradeOption">A+</option>
+                            <option value="gradeOption">A0</option>
+                            <option value="gradeOption">A-</option>
+                            <option value="gradeOption">B+</option>
+                            <option value="gradeOption">B0</option>
+                            <option value="gradeOption">B-</option>
+                            <option value="gradeOption">C+</option>
+                            <option value="gradeOption">C0</option>
+                            <option value="gradeOption">C-</option>
+                            <option value="gradeOption">D+</option>
+                            <option value="gradeOption">D0</option>
+                            <option value="gradeOption">D-</option>
+                            <option value="gradeOption">F</option>
+                        </select>
+                    </div>
+
+                    <br><hr><br>
+                    
+                    <div class="board">
+                        <input type="checkbox" class="boardCheckbox">
+                        <span>20240001</span>
+                        <span>하경진</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>100%</span>
+                        <select name="grade" id="grade">
+                            <option value="gradeOption">A+</option>
+                            <option value="gradeOption">A0</option>
+                            <option value="gradeOption">A-</option>
+                            <option value="gradeOption">B+</option>
+                            <option value="gradeOption">B0</option>
+                            <option value="gradeOption">B-</option>
+                            <option value="gradeOption">C+</option>
+                            <option value="gradeOption">C0</option>
+                            <option value="gradeOption">C-</option>
+                            <option value="gradeOption">D+</option>
+                            <option value="gradeOption">D0</option>
+                            <option value="gradeOption">D-</option>
+                            <option value="gradeOption">F</option>
+                        </select>
+                    </div>
+
+                    <br><hr><br>
+                    
+                    <div class="board">
+                        <input type="checkbox" class="boardCheckbox">
+                        <span>20240001</span>
+                        <span>하경진</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>100%</span>
+                        <select name="grade" id="grade">
+                            <option value="gradeOption">A+</option>
+                            <option value="gradeOption">A0</option>
+                            <option value="gradeOption">A-</option>
+                            <option value="gradeOption">B+</option>
+                            <option value="gradeOption">B0</option>
+                            <option value="gradeOption">B-</option>
+                            <option value="gradeOption">C+</option>
+                            <option value="gradeOption">C0</option>
+                            <option value="gradeOption">C-</option>
+                            <option value="gradeOption">D+</option>
+                            <option value="gradeOption">D0</option>
+                            <option value="gradeOption">D-</option>
+                            <option value="gradeOption">F</option>
+                        </select>
+                    </div>
+
+                    <br><hr><br>
+                    
+                    <div class="board">
+                        <input type="checkbox" class="boardCheckbox">
+                        <span>20240001</span>
+                        <span>하경진</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>100%</span>
+                        <select name="grade" id="grade">
+                            <option value="gradeOption">A+</option>
+                            <option value="gradeOption">A0</option>
+                            <option value="gradeOption">A-</option>
+                            <option value="gradeOption">B+</option>
+                            <option value="gradeOption">B0</option>
+                            <option value="gradeOption">B-</option>
+                            <option value="gradeOption">C+</option>
+                            <option value="gradeOption">C0</option>
+                            <option value="gradeOption">C-</option>
+                            <option value="gradeOption">D+</option>
+                            <option value="gradeOption">D0</option>
+                            <option value="gradeOption">D-</option>
+                            <option value="gradeOption">F</option>
+                        </select>
                     </div>
 
                 </div> <!-- boardContainer -->

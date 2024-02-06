@@ -1,11 +1,16 @@
 .titleContainer {
     width: 1200px;
     display: flex;
+    justify-content: space-between;
 }
 
 .titleContainer > * {
     font-size: 14px;
     color: #6c6c6c;
+    display: flex;
+}
+
+.searchContainer {
     display: flex;
 }
 
@@ -16,7 +21,7 @@
 }
 
 input {
-     width: 180px;
+    width: 180px;
     height: 25px;
     margin-right: 20px;
     border-radius: 5px;
@@ -67,7 +72,6 @@ select#adminSelect {
     font-weight: medium;
     cursor: pointer;
     margin-left: -17px;
-    margin-right: 20px;
     }
     
 .dropdownButton button:hover {
