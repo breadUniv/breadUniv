@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>출석체크</title>
+</head>
+<body>
+
+<h2>출석체크</h2>
+<form id="attendanceForm">
+    <label for="studentId">학번:</label>
+    <input type="text" id="studentId" name="studentId" required>
+                        <span>김민하</span>
+                        <span>기초디자인1</span>
+                        <span>시각정보디자인</span>
+                        <span>전공필수</span>
+    <div id="attendanceStatusDiv">
+        <label><input type="radio" name="attendanceStatus" value="출석"> 출석</label>
+        <label><input type="radio" name="attendanceStatus" value="지각"> 지각</label>
+        <label><input type="radio" name="attendanceStatus" value="조퇴"> 조퇴</label>
+        <label><input type="radio" name="attendanceStatus" value="결석"> 결석</label>
+    </div>
+    <button type="button" id="submitBtn">등록</button>
+    <button type="button" id="modifyBtn" style="display: none;">수정</button>
+    
+    
+</form>
+
+<div id="attendanceRate"></div>
+
+<script>
+var initialAttendanceCount = {
+    '출석': 0,
+    '지각': 0,
+    '조퇴': 0,
+    '결석': 0
+};
+
+var lastAttendanceStatus = ''; // 최근 출석 상태
+var attendanceCount = Object.assign({}, initialAttendanceCount);
+
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+    var studentId = document.getElementById("studentId").value;
+    var status = document.querySelector('input[name="attendanceStatus"]:checked');
+
+    if (status) {
+        if (lastAttendanceStatus !== status.value) {
+            // 이전 출석 상태와 현재 출석 상태가 다른 경우에만 카운트를 증가시킴
+            if (lastAttendanceStatus !== '') {
+                attendanceCount[lastAttendanceStatus]--;
+            }
+            attendanceCount[status.value]++;
+            lastAttendanceStatus = status.value;
+        }
+
+        // 카운트 숫자값 표시
+        var attendanceCountDiv = document.getElementById("attendanceStatusDiv");
+        attendanceCountDiv.innerHTML = "출석: " + attendanceCount['출석'] + ", 지각: " + attendanceCount['지각'] + ", 조퇴: " + attendanceCount['조퇴'] + ", 결석: " + attendanceCount['결석'];
+
+        var totalAttendance = attendanceCount['출석'] + attendanceCount['지각'] + attendanceCount['조퇴'] + attendanceCount['결석'];
+        var attendanceRateDiv = document.getElementById("attendanceRate");
+        attendanceRateDiv.textContent = "출석률: " + ((attendanceCount['출석'] / totalAttendance) * 100).toFixed(2) + "%";
+
+        // 등록 버튼 클릭 시 출석 상태 변경 불가능하도록 설정
+        var radioButtons = document.querySelectorAll('input[name="attendanceStatus"]');
+        radioButtons.forEach(function(radioButton) {
+            radioButton.style.display = "none";
+        });
+
+        document.getElementById("submitBtn").style.display = "none";
+        document.getElementById("modifyBtn").style.display = "inline-block";
+    } else {
+        alert("출석 상태를 선택하세요.");
+    }
+});
+
+document.getElementById("modifyBtn").addEventListener("click", function(event) {
+    // radio 버튼 다시 활성화
+    var radioButtons = document.querySelectorAll('input[name="attendanceStatus"]');
+    radioButtons.forEach(function(radioButton) {
+        radioButton.style.display = "inline-block";
+    });
+
+    document.getElementById("submitBtn").style.display = "inline-block";
+    document.getElementById("modifyBtn").style.display = "none";
+
+    // 출석 상태 카운트 값 초기화
+    var attendanceCountDiv = document.getElementById("attendanceStatusDiv");
+    attendanceCountDiv.innerHTML = '<label><input type="radio" name="attendanceStatus" value="출석"> 출석</label><label><input type="radio" name="attendanceStatus" value="지각"> 지각</label><label><input type="radio" name="attendanceStatus" value="조퇴"> 조퇴</label><label><input type="radio" name="attendanceStatus" value="결석"> 결석</label>';
+});
+
+</script>
+
+</body>
+</html>
